@@ -2,7 +2,7 @@
     <div class="widget-box">
         <div class="widget-header widget-header-flat">
             <h4 class="widget-title lighter">
-                <b>Turbine Parameter</b>
+                <b>Generator Parameter</b>
             </h4>
         </div>
         <div class="widget-body">
@@ -10,37 +10,37 @@
                 <table class="table table-bordered table-striped">
                     <tbody>
                         <tr>
-                            <td>RPM Turbine</td>
+                            <td>Active Power</td>
                             <td id="rpm"><b>
-                                    <center>###RPM###</center>
+                                    <center>###kW###</center>
                                 </b></td>
                         </tr>
                         <tr>
-                            <td>Water Level</td>
+                            <td>Generator Voltage</td>
                             <td><b>
-                                    <center>###mdpl###</center>
+                                    <center>###kV###</center>
                                 </b></td>
                         </tr>
                         <tr>
-                            <td>Turbine Inlet Water Press</td>
+                            <td>Generator Current</td>
                             <td><b>
-                                    <center>###bar###</center>
+                                    <center>###kA###</center>
                                 </b></td>
                         </tr>
                         <tr>
-                            <td>Governor Position</td>
+                            <td>Frequency</td>
                             <td><b>
-                                    <center>###%###</center>
+                                    <center>###Hz###</center>
                                 </b></td>
                         </tr>
                         <tr>
-                            <td>Turbine Thrust Bearing Temp</td>
+                            <td>Drive Side Bearing Temp</td>
                             <td><b>
                                     <center>###C###</center>
                                 </b></td>
                         </tr>
                         <tr>
-                            <td>Turbine Second Bearing Temp</td>
+                            <td>No-Drive Side Bearing Temp</td>
                             <td><b>
                                     <center>###C###</center>
                                 </b></td>
@@ -57,7 +57,7 @@
     <div class="widget-box">
         <div class="widget-header widget-header-flat">
             <h4 class="widget-title lighter">
-                <b>Gate Valve Monitoring</b>
+                <b>Excitation Monitoring</b>
             </h4>
         </div>
         <div class="widget-body">
@@ -72,7 +72,7 @@
                             </td>
                             <td>
                                 <b>
-                                Permit to open
+                                Permit to operation
                                 </b>
                             </td>
                         </tr>
@@ -84,10 +84,179 @@
                             </td>
                             <td>
                                 <b>
-                                Permit to close
+                                Remote Indication
                                 </b>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-default">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                Auto Operation
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-default">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                Manual Operation
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-default">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                ON Feedback
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-default">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                OFF Feedback
+                                </b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div><!-- /.col -->
+
+<div class="col-xs-12">
+    <div class="widget-box">
+        <div class="widget-header widget-header-flat">
+            <h4 class="widget-title lighter">
+                <b>Synch Monitoring</b>
+            </h4>
+        </div>
+        <div class="widget-body">
+            <div class="widget-main">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-success">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                Permit to operation
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-default">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                Remote Indication
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-default">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                Auto Operation
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-default">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                Manual Operation
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-default">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                ON Feedback
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-default">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                OFF Feedback
+                                </b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div><!-- /.col -->
+
+<div class="col-xs-12">
+    <div class="widget-box">
+        <div class="widget-header widget-header-flat">
+            <h4 class="widget-title lighter">
+                <b>CB Monitoring</b>
+            </h4>
+        </div>
+        <div class="widget-body">
+            <div class="widget-main">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label class="btn btn-xs btn-success">
+                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
+                                </label>
+                            </td>
+                            <td>
+                                <b>
+                                Permit to operation
+                                </b>
+                            </td>
+                        </tr>
+                        
                         <tr>
                             <td>
                                 <label class="btn btn-xs btn-default">
@@ -157,188 +326,6 @@
                             <td>
                                 <b>
                                 Trip Indication
-                                </b>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div><!-- /.col -->
-
-<div class="col-xs-12">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-            <h4 class="widget-title lighter">
-                <b>Gov Gear Mode Monitoring</b>
-            </h4>
-        </div>
-        <div class="widget-body">
-            <div class="widget-main">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-success">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Permit to operation
-                                </b>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-default">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Remote Indication
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-default">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Auto Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-default">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Manual Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-danger">
-                                    <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Fault Indication
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-danger">
-                                    <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Underspeed
-                                </b>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div><!-- /.col -->
-
-<div class="col-xs-12">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-            <h4 class="widget-title lighter">
-                <b>Gov Hyd Mode Monitoring</b>
-            </h4>
-        </div>
-        <div class="widget-body">
-            <div class="widget-main">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-success">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Permit to operation
-                                </b>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-default">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Remote Indication
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-default">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Auto Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-default">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Manual Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-danger">
-                                    <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Fault Indication
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="btn btn-xs btn-danger">
-                                    <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Underspeed
                                 </b>
                             </td>
                         </tr>
