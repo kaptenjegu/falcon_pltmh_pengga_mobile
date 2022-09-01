@@ -11,37 +11,37 @@
                     <tbody>
                         <tr>
                             <td>Active Power</td>
-                            <td id="rpm"><b>
+                            <td id="active_power"><b>
                                     <center>###kW###</center>
                                 </b></td>
                         </tr>
                         <tr>
                             <td>Generator Voltage</td>
-                            <td><b>
+                            <td id="voltage"><b>
                                     <center>###kV###</center>
                                 </b></td>
                         </tr>
                         <tr>
                             <td>Generator Current</td>
-                            <td><b>
+                            <td id="current"><b>
                                     <center>###kA###</center>
                                 </b></td>
                         </tr>
                         <tr>
                             <td>Frequency</td>
-                            <td><b>
+                            <td id="frequency"><b>
                                     <center>###Hz###</center>
                                 </b></td>
                         </tr>
                         <tr>
                             <td>Drive Side Bearing Temp</td>
-                            <td><b>
+                            <td id="drive"><b>
                                     <center>###C###</center>
                                 </b></td>
                         </tr>
                         <tr>
                             <td>No-Drive Side Bearing Temp</td>
-                            <td><b>
+                            <td id="non_drive"><b>
                                     <center>###C###</center>
                                 </b></td>
                         </tr>
@@ -66,7 +66,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-success">
+                                <label id="permit_operation_exc" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -78,7 +78,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="remote_indication_exc" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -90,7 +90,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="auto_status_exc" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -102,7 +102,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="manual_status_exc" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -114,7 +114,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="on_feedback_exc" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -126,7 +126,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="off_feedback_exc" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -156,7 +156,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-success">
+                                <label id="permit_operation_syn" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -168,7 +168,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="remote_indication_syn" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -180,7 +180,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="auto_status_syn" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -192,7 +192,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="manual_status_syn" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -204,7 +204,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="on_feedback_syn" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -216,7 +216,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="off_feedback_syn" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -246,7 +246,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-success">
+                                <label id="permit_operation_cb" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -259,7 +259,7 @@
                         
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="remote_indication_cb" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -271,7 +271,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="auto_status_cb" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -283,7 +283,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="manual_status_cb" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -295,7 +295,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="open_feedback_cb" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -307,7 +307,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-default">
+                                <label id="close_feedback_cb" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
@@ -319,7 +319,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="btn btn-xs btn-danger">
+                                <label id="trip_indication_cb" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
                                 </label>
                             </td>
