@@ -71,11 +71,26 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-			//$('#dataTables-example').dataTable();
-			//datatables
 			table = $('#dataTables-data').DataTable({
 			});
 		});
+
+		function get_alarm(){
+			$.ajax({
+				url : "<?php echo base_url().'alarm/data_out/'; ?>",
+				type: "GET",
+				dataType: "html",
+				success: function(data){ 
+				document.getElementById("alarm").innerHTML = data;      
+				},
+				error:function(data){
+					console.log('gagal konek cb');
+				}
+			});
+
+		}
+
+		setInterval(get_alarm, 10);
 	</script>
 	
 </body>
