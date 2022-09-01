@@ -227,14 +227,190 @@
 				}
 			});
 		}
+
+		function get_turbine() {
+			$.ajax({
+				url: "<?php echo base_url() . 'turbine/data_out/'; ?>",
+				type: "GET",
+				dataType: "json",
+				success: function(data) {
+					document.getElementById("second_bearing").innerHTML = '<b>' + data['second_bearing'] + ' C</b>';
+					document.getElementById("thrust_bearing").innerHTML = '<b>' + data['thrust_bearing'] + ' C</b>';
+					document.getElementById("turbine_speed").innerHTML = '<b>' + data['turbine_speed'] + ' RPM</b>';
+					document.getElementById("inlet_pressure").innerHTML = '<b>' + data['inlet_pressure'] + ' bar</b>';
+					document.getElementById("governor_position").innerHTML = '<b>' + data['governor_position'] + ' %</b>';
+					document.getElementById("water_level").innerHTML = '<b>' + data['water_level'] + ' mdpl</b>';
+				},
+				error: function(data) {
+					console.log('gagal konek turbine');
+				}
+			});
+
+			//Gate Valve
+			$.ajax({
+				url: "<?php echo base_url() . 'turbine/gate_valve/'; ?>",
+				type: "GET",
+				dataType: "json",
+				success: function(data) {
+					if (data['permit_open_gv'] == 1) {
+						document.getElementById("permit_open_gv").style.backgroundColor = "green";
+					} else {
+						document.getElementById("permit_open_gv").style.backgroundColor = "gray";
+					}
+
+					if (data['permit_close_gv'] == 1) {
+						document.getElementById("permit_close_gv").style.backgroundColor = "green";
+					} else {
+						document.getElementById("permit_close_gv").style.backgroundColor = "gray";
+					}
+
+					if (data['remote_indication_gv'] == 1) {
+						document.getElementById("remote_indication_gv").style.backgroundColor = "green";
+					} else {
+						document.getElementById("remote_indication_gv").style.backgroundColor = "gray";
+					}
+
+					if (data['auto_status_gv'] == 1) {
+						document.getElementById("auto_status_gv").style.backgroundColor = "green";
+					} else {
+						document.getElementById("auto_status_gv").style.backgroundColor = "gray";
+					}
+
+					if (data['manual_status_gv'] == 1) {
+						document.getElementById("manual_status_gv").style.backgroundColor = "green";
+					} else {
+						document.getElementById("manual_status_gv").style.backgroundColor = "gray";
+					}
+
+					if (data['open_feedback_gv'] == 1) {
+						document.getElementById("open_feedback_gv").style.backgroundColor = "green";
+					} else {
+						document.getElementById("open_feedback_gv").style.backgroundColor = "gray";
+					}
+
+					if (data['close_feedback_gv'] == 1) {
+						document.getElementById("close_feedback_gv").style.backgroundColor = "green";
+					} else {
+						document.getElementById("close_feedback_gv").style.backgroundColor = "gray";
+					}
+
+					if (data['trip_indication_gv'] == 1) {
+						document.getElementById("trip_indication_gv").style.backgroundColor = "red";
+					} else {
+						document.getElementById("trip_indication_gv").style.backgroundColor = "gray";
+					}
+				},
+				error: function(data) {
+					console.log('gagal konek');
+				}
+			});
+
+			//Gov gear mode
+			$.ajax({
+				url: "<?php echo base_url() . 'turbine/ggear_mode/'; ?>",
+				type: "GET",
+				dataType: "json",
+				success: function(data) {
+					if (data['permit_operation_ggm'] == 1) {
+						document.getElementById("permit_operation_ggm").style.backgroundColor = "green";
+					} else {
+						document.getElementById("permit_operation_ggm").style.backgroundColor = "gray";
+					}
+
+					if (data['remote_indication_ggm'] == 1) {
+						document.getElementById("remote_indication_ggm").style.backgroundColor = "green";
+					} else {
+						document.getElementById("remote_indication_ggm").style.backgroundColor = "gray";
+					}
+
+					if (data['auto_status_ggm'] == 1) {
+						document.getElementById("auto_status_ggm").style.backgroundColor = "green";
+					} else {
+						document.getElementById("auto_status_ggm").style.backgroundColor = "gray";
+					}
+
+					if (data['manual_status_ggm'] == 1) {
+						document.getElementById("manual_status_ggm").style.backgroundColor = "green";
+					} else {
+						document.getElementById("manual_status_ggm").style.backgroundColor = "gray";
+					}
+
+					if (data['fault_indication_ggm'] == 1) {
+						document.getElementById("fault_indication_ggm").style.backgroundColor = "red";
+					} else {
+						document.getElementById("fault_indication_ggm").style.backgroundColor = "gray";
+					}
+
+					if (data['underspeed_ggm'] == 1) {
+						document.getElementById("underspeed_ggm").style.backgroundColor = "red";
+					} else {
+						document.getElementById("underspeed_ggm").style.backgroundColor = "gray";
+					}
+				},
+				error: function(data) {
+					console.log('gagal konek');
+				}
+			});
+
+			//Gov hyd mode
+			$.ajax({
+				url: "<?php echo base_url() . 'turbine/ghyd_mode/'; ?>",
+				type: "GET",
+				dataType: "json",
+				success: function(data) {
+					if (data['permit_operation_ghm'] == 1) {
+						document.getElementById("permit_operation_ghm").style.backgroundColor = "green";
+					} else {
+						document.getElementById("permit_operation_ghm").style.backgroundColor = "gray";
+					}
+
+					if (data['remote_indication_ghm'] == 1) {
+						document.getElementById("remote_indication_ghm").style.backgroundColor = "green";
+					} else {
+						document.getElementById("remote_indication_ghm").style.backgroundColor = "gray";
+					}
+
+					if (data['auto_status_ghm'] == 1) {
+						document.getElementById("auto_status_ghm").style.backgroundColor = "green";
+					} else {
+						document.getElementById("auto_status_ghm").style.backgroundColor = "gray";
+					}
+
+					if (data['manual_status_ghm'] == 1) {
+						document.getElementById("manual_status_ghm").style.backgroundColor = "green";
+					} else {
+						document.getElementById("manual_status_ghm").style.backgroundColor = "gray";
+					}
+
+					if (data['fault_indication_ghm'] == 1) {
+						document.getElementById("fault_indication_ghm").style.backgroundColor = "red";
+					} else {
+						document.getElementById("fault_indication_ghm").style.backgroundColor = "gray";
+					}
+
+					if (data['underspeed_ghm'] == 1) {
+						document.getElementById("underspeed_ghm").style.backgroundColor = "red";
+					} else {
+						document.getElementById("underspeed_ghm").style.backgroundColor = "gray";
+					}
+				},
+				error: function(data) {
+					console.log('gagal konek');
+				}
+			});
+		}
+
+
 		<?php if ($page == "alarm") { ?>
 			setInterval(get_alarm, 10);
+		<?php } ?>
+		<?php if ($page == "turbine") { ?>
+			setInterval(get_turbine, 10);
 		<?php } ?>
 
 		<?php if ($page == "overview") { ?>
 			setInterval(get_home, 10);
 		<?php } ?>
-
 	</script>
 
 	</body>
