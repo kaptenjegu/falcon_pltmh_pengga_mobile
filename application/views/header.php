@@ -67,7 +67,6 @@
 
 	<div class="main-container ace-save-state" id="main-container">
 
-
 		<div class="main-content">
 			<div class="main-content-inner">
 				<?php if($page<>"home"){?>

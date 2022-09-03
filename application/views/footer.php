@@ -79,6 +79,7 @@
 				url: "<?php echo base_url() . 'alarm/data_out/'; ?>",
 				type: "GET",
 				dataType: "html",
+				cache: false,
 				success: function(data) {
 					document.getElementById("alarm").innerHTML = data;
 				},
@@ -95,6 +96,7 @@
 				url: "<?php echo base_url() . 'overview/ov_asp/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					if (data['1'] == 1) {
 						document.getElementById("prm1").style.backgroundColor = "green";
@@ -142,6 +144,7 @@
 				url: "<?php echo base_url() . 'overview/seq_start/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					if (data['1'] == 1) {
 						document.getElementById("sq_start1").style.backgroundColor = "green";
@@ -199,6 +202,7 @@
 				url: "<?php echo base_url() . 'overview/seq_stop/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					if (data['1'] == 1) {
 						document.getElementById("sq_stop1").style.backgroundColor = "green";
@@ -233,6 +237,7 @@
 				url: "<?php echo base_url() . 'turbine/data_out/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					document.getElementById("second_bearing").innerHTML = '<b>' + data['second_bearing'] + ' C</b>';
 					document.getElementById("thrust_bearing").innerHTML = '<b>' + data['thrust_bearing'] + ' C</b>';
@@ -251,6 +256,7 @@
 				url: "<?php echo base_url() . 'turbine/gate_valve/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					if (data['permit_open_gv'] == 1) {
 						document.getElementById("permit_open_gv").style.backgroundColor = "green";
@@ -310,6 +316,7 @@
 				url: "<?php echo base_url() . 'turbine/ggear_mode/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					if (data['permit_operation_ggm'] == 1) {
 						document.getElementById("permit_operation_ggm").style.backgroundColor = "green";
@@ -357,6 +364,7 @@
 				url: "<?php echo base_url() . 'turbine/ghyd_mode/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					if (data['permit_operation_ghm'] == 1) {
 						document.getElementById("permit_operation_ghm").style.backgroundColor = "green";
@@ -405,6 +413,7 @@
 				url: "<?php echo base_url() . 'Generators/data_out/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					document.getElementById("non_drive").innerHTML = '<b>' + data['non_drive'] + ' C</b>';
 					document.getElementById("drive").innerHTML = '<b>' + data['drive'] + ' C</b>';
@@ -423,6 +432,7 @@
 				url: "<?php echo base_url() . 'generators/excitation/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					if (data['permit_operation_exc'] == 1) {
 						document.getElementById("permit_operation_exc").style.backgroundColor = "green";
@@ -470,6 +480,7 @@
 				url: "<?php echo base_url() . 'generators/syn/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					if (data['permit_operation_syn'] == 1) {
 						document.getElementById("permit_operation_syn").style.backgroundColor = "green";
@@ -517,6 +528,7 @@
 				url: "<?php echo base_url() . 'generators/cb/'; ?>",
 				type: "GET",
 				dataType: "json",
+				cache: false,
 				success: function(data) {
 					if (data['permit_operation_cb'] == 1) {
 						document.getElementById("permit_operation_cb").style.backgroundColor = "green";
@@ -567,19 +579,19 @@
 				}
 			});
 		}
-
+		
 		<?php if ($page == "alarm") { ?>
-			setInterval(get_alarm, 10);
+			setInterval(get_alarm, 1000);
 		<?php } ?>
 		<?php if ($page == "turbine") { ?>
-			setInterval(get_turbine, 10);
+			setInterval(get_turbine, 1000);
 		<?php } ?>
 		<?php if ($page == "generators") { ?>
-			setInterval(get_generator, 10);
+			setInterval(get_generator, 1000);
 		<?php } ?>
 
 		<?php if ($page == "overview") { ?>
-			setInterval(get_home, 10);
+			setInterval(get_home, 1000);
 		<?php } ?>
 	</script>
 
