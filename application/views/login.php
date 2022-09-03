@@ -30,13 +30,13 @@
                             <!--div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div-->
-                            <input type="text" name="" class="form-control input_user" value="" placeholder="username">
+                            <input type="text" name="username" class="form-control input_user" value="" placeholder="username" required>
                         </div>
                         <div class="input-group mb-2">
                             <!--div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div-->
-                            <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
+                            <input type="password" name="password" class="form-control input_pass" value="" placeholder="password" required>
                         </div>
                         <!--div class="form-group">
                             <div class="custom-control custom-checkbox">
@@ -45,7 +45,7 @@
                             </div>
                         </div-->
                         <div class="d-flex justify-content-center mt-3 login_container">
-                            <button type="button" name="button" class="btn login_btn">Login</button>
+                            <button type="submit" name="button" class="btn login_btn">Login</button>
                         </div>
                     </form>
                 </div>
