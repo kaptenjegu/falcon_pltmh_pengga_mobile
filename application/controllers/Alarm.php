@@ -7,6 +7,7 @@ class Alarm extends CI_Controller
     {
         parent::__construct();
         detection();
+        is_logged_in();
     }
 
     public function index()

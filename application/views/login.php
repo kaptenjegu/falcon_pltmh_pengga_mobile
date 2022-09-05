@@ -1,3 +1,8 @@
+<?php
+header('Cache-Control: no-cache, no-store, must-revalidate');
+header('Pragma: no-cache');
+header('Expires: 0');
+?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -25,18 +30,18 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center form_container">
-                    <form>
+                    <form method="POST" action="<?= base_url('login/cek/'); ?>">
                         <div class="input-group mb-3">
                             <!--div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div-->
-                            <input type="text" name="username" class="form-control input_user" value="" placeholder="username" required>
+                            <input type="text" name="user" class="form-control input_user" value="" placeholder="username" required>
                         </div>
                         <div class="input-group mb-2">
                             <!--div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div-->
-                            <input type="password" name="password" class="form-control input_pass" value="" placeholder="password" required>
+                            <input type="password" name="pass" class="form-control input_pass" value="" placeholder="password" required>
                         </div>
                         <!--div class="form-group">
                             <div class="custom-control custom-checkbox">

@@ -75,9 +75,17 @@
 				<i class="ace-icon fa fa-cog bigger-530"></i>
 				Generator
 			</a>
+			<a href="<?= base_url('user'); ?>" class="btn btn-app btn-purple radius-4">
+				<i class="ace-icon fa fa-user bigger-530"></i>
+				User
+			</a>
 			<a href="<?= base_url('alarm'); ?>" class="btn btn-app btn-purple radius-4">
 				<i class="ace-icon fa fa-bell-o bigger-530"></i>
 				Alarm
+			</a>
+			<a href="<?= base_url('login/out'); ?>" class="btn btn-app btn-purple radius-4">
+				<i class="ace-icon fa fa-sign-out bigger-530"></i>
+				LogOut
 			</a>
 
 		</center>
