@@ -5,6 +5,7 @@
 		<marquee>Selamat datang di aplikasi Monitoring PLTMH Pengga</b>.</marquee>
 	</div>
 
+
 	<div class="col-xs-12">
 
 		<div class="widget-box">
@@ -17,48 +18,41 @@
 
 			<div class="widget-body">
 				<div class="widget-main">
-					<div class="col-sm-5">
-						<div class="widget-box transparent">
-							<div class="widget-body">
-								<div class="widget-main no-padding">
-									<table class="table table-bordered table-striped">
-										<tbody>
-											<tr>
-												<td>Alarm Status</td>
+					<table class="table table-bordered table-striped">
+						<tbody>
+							<tr>
+								<td>Alarm Status</td>
 
-												<td>
-													<span class="label label-success arrowed arrowed-right">No Alarm</span>
-												</td>
-											</tr>
+								<td>
+									<span class="label label-success arrowed arrowed-right">No Alarm</span>
+								</td>
+							</tr>
 
-											<tr>
-												<td>Turbine Status</td>
+							<tr>
+								<td>Turbine Status</td>
 
-												<td>
-													<span class="label label-success arrowed arrowed-right">Running</span>
-												</td>
-											</tr>
+								<td>
+									<span class="label label-success arrowed arrowed-right">Running</span>
+								</td>
+							</tr>
 
-											<tr>
-												<td>CB Status</td>
+							<tr>
+								<td>CB Status</td>
 
-												<td>
-													<b class="label label-default arrowed arrowed-right">Close</b>
-												</td>
-											</tr>
+								<td>
+									<b class="label label-default arrowed arrowed-right">Close</b>
+								</td>
+							</tr>
 
 
-										</tbody>
-									</table>
-								</div><!-- /.widget-main -->
-							</div><!-- /.widget-body -->
-						</div><!-- /.widget-box -->
-					</div>
+						</tbody>
+					</table>
+
 				</div><!-- /.widget-main -->
 			</div><!-- /.widget-body -->
 		</div><!-- /.widget-box -->
 	</div><!-- /.col -->
-	<!--div class="col-xs-2"></div-->
+
 
 	<div class="col-xs-12">
 		<center>
