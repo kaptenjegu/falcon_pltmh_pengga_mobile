@@ -20,7 +20,7 @@ header('Expires: 0');
 </head>
 <!--Coded with love by Mutiullah Samim-->
 
-<body style="background-image: url('<?= base_url('assets/images/bg.jpg');?>');background-repeat: no-repeat;background-position: center;background-attachment: fixed;">
+<body style="background-image: url('<?= base_url('assets/images/bg.jpg?random=' . rand());?>');background-repeat: no-repeat;background-position: center;background-attachment: fixed;">
     <div class="container h-100">
         <div class="d-flex justify-content-center h-100">
             <div class="user_card" style="background-color: #000032;">
