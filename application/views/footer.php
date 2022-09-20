@@ -476,6 +476,37 @@
 			
 		}
 
+		function get_dashboard(){
+			//n_alarm
+			$.ajax({
+			url: "<?php echo base_url() . 'api_client/dashboard/'; ?>",
+			type: "GET",
+			dataType: "json",
+			success: function (data) {
+				if (data['n_alarm'] == 0) {
+					document.getElementById("dash_alarm").innerHTML = '<span class="label label-success arrowed arrowed-right">No Alarm</span>';
+				} else {
+					document.getElementById("dash_alarm").innerHTML = '<span class="label label-danger arrowed arrowed-right">Alarm</span>';
+				}
+
+				if (data['turbin'] > 0) {
+					document.getElementById("dash_turbin").innerHTML = '<span class="label label-success arrowed arrowed-right">Running</span>';
+				} else {
+					document.getElementById("dash_turbin").innerHTML = '<span class="label label-default arrowed arrowed-right">Not Running</span>';
+				}
+
+				if (data['cb'] == 1) {
+					document.getElementById("dash_cb").innerHTML = '<span class="label label-success arrowed arrowed-right">Open</span>';
+				} else {
+					document.getElementById("dash_cb").innerHTML = '<b class="label label-default arrowed arrowed-right">Close</b>';
+				}
+			},
+			error: function (data) {
+				console.log('gagal konek n_alarm');
+			}
+			});
+		}
+
 		<?php if ($page == "alarm") { ?>
 			setInterval(get_alarm, 1000);
 		<?php } ?>

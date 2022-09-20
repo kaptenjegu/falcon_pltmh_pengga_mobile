@@ -24,23 +24,23 @@
 								<td>Alarm Status</td>
 
 								<td id="dash_alarm">
-									<span class="label label-success arrowed arrowed-right">No Alarm</span>
+									
 								</td>
 							</tr>
 
 							<tr>
 								<td>Turbine Status</td>
 
-								<td>
-									<span class="label label-success arrowed arrowed-right">Running</span>
+								<td id="dash_turbin">
+									
 								</td>
 							</tr>
 
 							<tr>
 								<td>CB Status</td>
 
-								<td>
-									<b class="label label-default arrowed arrowed-right">Close</b>
+								<td id="dash_cb">
+									
 								</td>
 							</tr>
 

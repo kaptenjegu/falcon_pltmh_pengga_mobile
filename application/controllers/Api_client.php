@@ -224,4 +224,10 @@ class Api_client extends CI_Controller
 		$data = $this->db->query("SELECT * FROM pltmh_pengga_ov_asp, pltmh_pengga_seq_start,pltmh_pengga_seq_stop")->first_row();
 		echo json_encode($data);
 	}
+
+    public function dashboard()
+	{
+		$data = $this->db->query("SELECT (SELECT count(*) from pltmh_pengga_alarm_var where status_alarm=1) as n_alarm, (SELECT turbine_speed FROM pltmh_pengga_turbine limit 1) as turbin, (SELECT open_feedback_cb FROM pltmh_pengga_cb) as cb")->first_row();
+		echo json_encode($data);
+	}
 }
