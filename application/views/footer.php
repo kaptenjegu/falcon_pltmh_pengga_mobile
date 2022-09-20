@@ -84,7 +84,7 @@
 					document.getElementById("alarm").innerHTML = data;
 				},
 				error: function(data) {
-					console.log('gagal konek cb');
+					console.log('gagal konek alarm');
 				}
 			});
 
@@ -92,7 +92,7 @@
 
 		function get_home() {
 			$.ajax({
-				url: "<?php echo base_url() . 'overview/data_out/'; ?>",
+				url: "<?php echo base_url() . 'api_client/ov_data/'; ?>",
 				type: "GET",
 				dataType: "json",
 				success: function(data) {
@@ -208,7 +208,7 @@
 
 		function get_turbine() {
 			$.ajax({
-				url: "<?php echo base_url() . 'turbine/data_out/'; ?>",
+				url: "<?php echo base_url() . 'api_client/turbine_data/'; ?>",
 				type: "GET",
 				dataType: "json",
 				cache: false,
@@ -227,7 +227,7 @@
 
 			//variabel Turbine
 			$.ajax({
-				url: "<?php echo base_url() . 'turbine/var_out/'; ?>",
+				url: "<?php echo base_url() . 'api_client/turbine_var/'; ?>",
 				type: "GET",
 				dataType: "json",
 				cache: false,
@@ -352,7 +352,7 @@
 
 		function get_generator() {
 			$.ajax({
-				url: "<?php echo base_url() . 'Generators/data_out/'; ?>",
+				url: "<?php echo base_url() . 'api_client/generators_data/'; ?>",
 				type: "GET",
 				dataType: "json",
 				cache: false,
@@ -371,7 +371,7 @@
 
 			// Generator Variabel
 			$.ajax({
-				url: "<?php echo base_url() . 'generators/var_out/'; ?>",
+				url: "<?php echo base_url() . 'api_client/generators_var/'; ?>",
 				type: "GET",
 				dataType: "json",
 				cache: false,
@@ -485,9 +485,11 @@
 		<?php if ($page == "generators") { ?>
 			setInterval(get_generator, 1000);
 		<?php } ?>
-
 		<?php if ($page == "overview") { ?>
 			setInterval(get_home, 1000);
+		<?php } ?>
+		<?php if ($page == "home") { ?>
+			setInterval(get_dashboard, 1000);
 		<?php } ?>
 	</script>
 

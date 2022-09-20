@@ -23,7 +23,7 @@
 							<tr>
 								<td>Alarm Status</td>
 
-								<td>
+								<td id="dash_alarm">
 									<span class="label label-success arrowed arrowed-right">No Alarm</span>
 								</td>
 							</tr>
