@@ -91,143 +91,117 @@
 		}
 
 		function get_home() {
-			//ASP var
 			$.ajax({
-				url: "<?php echo base_url() . 'overview/ov_asp/'; ?>",
+				url: "<?php echo base_url() . 'overview/data_out/'; ?>",
 				type: "GET",
 				dataType: "json",
-				cache: false,
 				success: function(data) {
-					if (data['1'] == 1) {
+					//ASP var
+					if (data['prm1'] == 1) {
 						document.getElementById("prm1").style.backgroundColor = "green";
 					} else {
 						document.getElementById("prm1").style.backgroundColor = "gray";
 					}
-					if (data['2'] == 1) {
+					if (data['prm2'] == 1) {
 						document.getElementById("prm2").style.backgroundColor = "green";
 					} else {
 						document.getElementById("prm2").style.backgroundColor = "gray";
 					}
-					if (data['3'] == 1) {
+					if (data['prm3'] == 1) {
 						document.getElementById("prm3").style.backgroundColor = "green";
 					} else {
 						document.getElementById("prm3").style.backgroundColor = "gray";
 					}
-					if (data['4'] == 1) {
+					if (data['prm4'] == 1) {
 						document.getElementById("prm4").style.backgroundColor = "green";
 					} else {
 						document.getElementById("prm4").style.backgroundColor = "gray";
 					}
-					if (data['5'] == 1) {
+					if (data['prm5'] == 1) {
 						document.getElementById("prm5").style.backgroundColor = "green";
 					} else {
 						document.getElementById("prm5").style.backgroundColor = "gray";
 					}
-					if (data['6'] == 1) {
+					if (data['prm6'] == 1) {
 						document.getElementById("prm6").style.backgroundColor = "green";
 					} else {
 						document.getElementById("prm6").style.backgroundColor = "gray";
 					}
-					if (data['7'] == 1) {
+					if (data['prm7'] == 1) {
 						document.getElementById("prm7").style.backgroundColor = "green";
 					} else {
 						document.getElementById("prm7").style.backgroundColor = "gray";
 					}
-				},
-				error: function(data) {
-					console.log('gagal konek ov asp');
-				}
-			});
-
-			//SEQ Start
-			$.ajax({
-				url: "<?php echo base_url() . 'overview/seq_start/'; ?>",
-				type: "GET",
-				dataType: "json",
-				cache: false,
-				success: function(data) {
-					if (data['1'] == 1) {
+					//SEQ Start
+					if (data['sq_start1'] == 1) {
 						document.getElementById("sq_start1").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_start1").style.backgroundColor = "gray";
 					}
-					if (data['2'] == 1) {
+					if (data['sq_start2'] == 1) {
 						document.getElementById("sq_start2").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_start2").style.backgroundColor = "gray";
 					}
-					if (data['3'] == 1) {
+					if (data['sq_start3'] == 1) {
 						document.getElementById("sq_start3").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_start3").style.backgroundColor = "gray";
 					}
-					if (data['4'] == 1) {
+					if (data['sq_start4'] == 1) {
 						document.getElementById("sq_start4").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_start4").style.backgroundColor = "gray";
 					}
-					if (data['5'] == 1) {
+					if (data['sq_start5'] == 1) {
 						document.getElementById("sq_start5").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_start5").style.backgroundColor = "gray";
 					}
-					if (data['6'] == 1) {
+					if (data['sq_start6'] == 1) {
 						document.getElementById("sq_start6").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_start6").style.backgroundColor = "gray";
 					}
-					if (data['7'] == 1) {
+					if (data['sq_start7'] == 1) {
 						document.getElementById("sq_start7").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_start7").style.backgroundColor = "gray";
 					}
-					if (data['8'] == 1) {
+					if (data['sq_start8'] == 1) {
 						document.getElementById("sq_start8").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_start8").style.backgroundColor = "gray";
 					}
-					if (data['9'] == 1) {
+					if (data['sq_start9'] == 1) {
 						document.getElementById("sq_start9").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_start9").style.backgroundColor = "gray";
 					}
-				},
-				error: function(data) {
-					console.log('gagal konek seq start');
-				}
-			});
-
-			//SEQ Stop
-			$.ajax({
-				url: "<?php echo base_url() . 'overview/seq_stop/'; ?>",
-				type: "GET",
-				dataType: "json",
-				cache: false,
-				success: function(data) {
-					if (data['1'] == 1) {
+					//SEQ Stop
+					if (data['sq_stop1'] == 0) {
 						document.getElementById("sq_stop1").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_stop1").style.backgroundColor = "gray";
 					}
-					if (data['2'] == 1) {
+					if (data['sq_stop2'] == 0) {
 						document.getElementById("sq_stop2").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_stop2").style.backgroundColor = "gray";
 					}
-					if (data['3'] == 1) {
+					if (data['sq_stop3'] == 0) {
 						document.getElementById("sq_stop3").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_stop3").style.backgroundColor = "gray";
 					}
-					if (data['4'] == 1) {
+					if (data['sq_stop4'] == 1) {
 						document.getElementById("sq_stop4").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_stop4").style.backgroundColor = "gray";
 					}
-
 				},
 				error: function(data) {
-					console.log('gagal konek seq stop');
+					console.log('gagal konek Home Mobile');
 				}
 			});
 		}
@@ -251,13 +225,14 @@
 				}
 			});
 
-			//Gate Valve
+			//variabel Turbine
 			$.ajax({
-				url: "<?php echo base_url() . 'turbine/gate_valve/'; ?>",
+				url: "<?php echo base_url() . 'turbine/var_out/'; ?>",
 				type: "GET",
 				dataType: "json",
 				cache: false,
 				success: function(data) {
+					//Miv / Gate Valve
 					if (data['permit_open_gv'] == 1) {
 						document.getElementById("permit_open_gv").style.backgroundColor = "green";
 					} else {
@@ -278,14 +253,10 @@
 
 					if (data['auto_status_gv'] == 1) {
 						document.getElementById("auto_status_gv").style.backgroundColor = "green";
+						document.getElementById("manual_status_gv").style.backgroundColor = "gray";
 					} else {
 						document.getElementById("auto_status_gv").style.backgroundColor = "gray";
-					}
-
-					if (data['manual_status_gv'] == 1) {
 						document.getElementById("manual_status_gv").style.backgroundColor = "green";
-					} else {
-						document.getElementById("manual_status_gv").style.backgroundColor = "gray";
 					}
 
 					if (data['open_feedback_gv'] == 1) {
@@ -305,19 +276,8 @@
 					} else {
 						document.getElementById("trip_indication_gv").style.backgroundColor = "gray";
 					}
-				},
-				error: function(data) {
-					console.log('gagal konek');
-				}
-			});
 
-			//Gov gear mode
-			$.ajax({
-				url: "<?php echo base_url() . 'turbine/ggear_mode/'; ?>",
-				type: "GET",
-				dataType: "json",
-				cache: false,
-				success: function(data) {
+					//Gov Gear Mode
 					if (data['permit_operation_ggm'] == 1) {
 						document.getElementById("permit_operation_ggm").style.backgroundColor = "green";
 					} else {
@@ -332,14 +292,10 @@
 
 					if (data['auto_status_ggm'] == 1) {
 						document.getElementById("auto_status_ggm").style.backgroundColor = "green";
+						document.getElementById("manual_status_ggm").style.backgroundColor = "gray";
 					} else {
 						document.getElementById("auto_status_ggm").style.backgroundColor = "gray";
-					}
-
-					if (data['manual_status_ggm'] == 1) {
 						document.getElementById("manual_status_ggm").style.backgroundColor = "green";
-					} else {
-						document.getElementById("manual_status_ggm").style.backgroundColor = "gray";
 					}
 
 					if (data['fault_indication_ggm'] == 1) {
@@ -353,19 +309,8 @@
 					} else {
 						document.getElementById("underspeed_ggm").style.backgroundColor = "gray";
 					}
-				},
-				error: function(data) {
-					console.log('gagal konek');
-				}
-			});
 
-			//Gov hyd mode
-			$.ajax({
-				url: "<?php echo base_url() . 'turbine/ghyd_mode/'; ?>",
-				type: "GET",
-				dataType: "json",
-				cache: false,
-				success: function(data) {
+					//Gov Hyd Mode
 					if (data['permit_operation_ghm'] == 1) {
 						document.getElementById("permit_operation_ghm").style.backgroundColor = "green";
 					} else {
@@ -380,14 +325,10 @@
 
 					if (data['auto_status_ghm'] == 1) {
 						document.getElementById("auto_status_ghm").style.backgroundColor = "green";
+						document.getElementById("manual_status_ghm").style.backgroundColor = "gray";
 					} else {
 						document.getElementById("auto_status_ghm").style.backgroundColor = "gray";
-					}
-
-					if (data['manual_status_ghm'] == 1) {
 						document.getElementById("manual_status_ghm").style.backgroundColor = "green";
-					} else {
-						document.getElementById("manual_status_ghm").style.backgroundColor = "gray";
 					}
 
 					if (data['fault_indication_ghm'] == 1) {
@@ -406,6 +347,7 @@
 					console.log('gagal konek');
 				}
 			});
+
 		}
 
 		function get_generator() {
@@ -427,13 +369,14 @@
 				}
 			});
 
-			// excitation
+			// Generator Variabel
 			$.ajax({
-				url: "<?php echo base_url() . 'generators/excitation/'; ?>",
+				url: "<?php echo base_url() . 'generators/var_out/'; ?>",
 				type: "GET",
 				dataType: "json",
 				cache: false,
 				success: function(data) {
+					// excitation
 					if (data['permit_operation_exc'] == 1) {
 						document.getElementById("permit_operation_exc").style.backgroundColor = "green";
 					} else {
@@ -448,40 +391,21 @@
 
 					if (data['auto_status_exc'] == 1) {
 						document.getElementById("auto_status_exc").style.backgroundColor = "green";
+						document.getElementById("manual_status_exc").style.backgroundColor = "gray";
 					} else {
 						document.getElementById("auto_status_exc").style.backgroundColor = "gray";
-					}
-
-					if (data['manual_status_exc'] == 1) {
 						document.getElementById("manual_status_exc").style.backgroundColor = "green";
-					} else {
-						document.getElementById("manual_status_exc").style.backgroundColor = "gray";
 					}
 
 					if (data['on_feedback_exc'] == 1) {
 						document.getElementById("on_feedback_exc").style.backgroundColor = "green";
+						document.getElementById("off_feedback_exc").style.backgroundColor = "gray";
 					} else {
 						document.getElementById("on_feedback_exc").style.backgroundColor = "gray";
-					}
-
-					if (data['off_feedback_exc'] == 1) {
 						document.getElementById("off_feedback_exc").style.backgroundColor = "green";
-					} else {
-						document.getElementById("off_feedback_exc").style.backgroundColor = "gray";
 					}
-				},
-				error: function(data) {
-					console.log('gagal konek');
-				}
-			});
 
-			// synchron
-			$.ajax({
-				url: "<?php echo base_url() . 'generators/syn/'; ?>",
-				type: "GET",
-				dataType: "json",
-				cache: false,
-				success: function(data) {
+					// synchron
 					if (data['permit_operation_syn'] == 1) {
 						document.getElementById("permit_operation_syn").style.backgroundColor = "green";
 					} else {
@@ -496,40 +420,21 @@
 
 					if (data['auto_status_syn'] == 1) {
 						document.getElementById("auto_status_syn").style.backgroundColor = "green";
+						document.getElementById("manual_status_syn").style.backgroundColor = "gray";
 					} else {
 						document.getElementById("auto_status_syn").style.backgroundColor = "gray";
-					}
-
-					if (data['manual_status_syn'] == 1) {
 						document.getElementById("manual_status_syn").style.backgroundColor = "green";
-					} else {
-						document.getElementById("manual_status_syn").style.backgroundColor = "gray";
 					}
 
 					if (data['on_feedback_syn'] == 1) {
 						document.getElementById("on_feedback_syn").style.backgroundColor = "green";
+						document.getElementById("off_feedback_syn").style.backgroundColor = "gray";
 					} else {
 						document.getElementById("on_feedback_syn").style.backgroundColor = "gray";
-					}
-
-					if (data['off_feedback_syn'] == 1) {
 						document.getElementById("off_feedback_syn").style.backgroundColor = "green";
-					} else {
-						document.getElementById("off_feedback_syn").style.backgroundColor = "gray";
 					}
-				},
-				error: function(data) {
-					console.log('gagal konek sync');
-				}
-			});
 
-			// CB
-			$.ajax({
-				url: "<?php echo base_url() . 'generators/cb/'; ?>",
-				type: "GET",
-				dataType: "json",
-				cache: false,
-				success: function(data) {
+					// CB
 					if (data['permit_operation_cb'] == 1) {
 						document.getElementById("permit_operation_cb").style.backgroundColor = "green";
 					} else {
@@ -544,26 +449,18 @@
 
 					if (data['auto_status_cb'] == 1) {
 						document.getElementById("auto_status_cb").style.backgroundColor = "green";
+						document.getElementById("manual_status_cb").style.backgroundColor = "gray";
 					} else {
 						document.getElementById("auto_status_cb").style.backgroundColor = "gray";
-					}
-
-					if (data['manual_status_cb'] == 1) {
 						document.getElementById("manual_status_cb").style.backgroundColor = "green";
-					} else {
-						document.getElementById("manual_status_cb").style.backgroundColor = "gray";
 					}
 
 					if (data['open_feedback_cb'] == 1) {
 						document.getElementById("open_feedback_cb").style.backgroundColor = "green";
+						document.getElementById("close_feedback_cb").style.backgroundColor = "gray";
 					} else {
 						document.getElementById("open_feedback_cb").style.backgroundColor = "gray";
-					}
-
-					if (data['close_feedback_cb'] == 1) {
 						document.getElementById("close_feedback_cb").style.backgroundColor = "green";
-					} else {
-						document.getElementById("close_feedback_cb").style.backgroundColor = "gray";
 					}
 
 					if (data['trip_indication_cb'] == 1) {
@@ -572,14 +469,13 @@
 						document.getElementById("trip_indication_cb").style.backgroundColor = "gray";
 					}
 				},
-
 				error: function(data) {
-					//second_bearing.innerHTML = 'invalid';
-					console.log('gagal konek cb');
+					console.log('gagal konek generator');
 				}
 			});
+			
 		}
-		
+
 		<?php if ($page == "alarm") { ?>
 			setInterval(get_alarm, 1000);
 		<?php } ?>

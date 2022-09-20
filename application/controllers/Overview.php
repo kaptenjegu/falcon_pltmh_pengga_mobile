@@ -15,22 +15,9 @@ class Overview extends CI_Controller {
 		$this->load->view('overview',$data);
 		$this->load->view('footer',$data);
 	}
-	public function ov_asp()
+	public function data_out()
 	{
-		$this->db->where('id', 1);
-		$data = $this->db->get('pltmh_pengga_ov_asp')->first_row();
-		echo json_encode($data);
-	}
-	public function seq_start()
-	{
-		$this->db->where('id', 1);
-		$data = $this->db->get('pltmh_pengga_seq_start')->first_row();
-		echo json_encode($data);
-	}
-	public function seq_stop()
-	{
-		$this->db->where('id', 1);
-		$data = $this->db->get('pltmh_pengga_seq_stop')->first_row();
+		$data = $this->db->query("SELECT * FROM pltmh_pengga_ov_asp, pltmh_pengga_seq_start,pltmh_pengga_seq_stop")->first_row();
 		echo json_encode($data);
 	}
 	
