@@ -1,5 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-error_reporting(0);
+//error_reporting(0);
 class Api_client extends CI_Controller
 {
 
@@ -169,21 +169,18 @@ class Api_client extends CI_Controller
     {
         try {
             $data = json_decode($this->input->post('data_json'));
+            //$data = $this->input->post('data_json');
             
-            //Generator
-            $this->db->set('non_drive', $data->non_drive);
-            $this->db->set('drive', $data->drive);
-            $this->db->set('active_power', $data->active_power);
-            $this->db->set('voltage', $data->voltage);
-            $this->db->set('current', $data->current);
-            $this->db->set('frequency', $data->frequency);
-            $this->db->where('id', 1);
-            $this->db->update('pltmh_pengga_generator');
-            //echo 'Update Generator Success';
+            //Alarm
+            foreach($data as $v){
+                $this->db->set('status_alarm', $v->status_alarm);
+                $this->db->where('id_alarm', $v->id_alarm);
+                $this->db->update('pltmh_pengga_alarm_var');
+                #echo 'Update Alarm Success' . $v->id_alarm;
+            }          
             echo 'Update Alarm Success';
-
         } catch (\Throwable $th) {
-            echo 'Error VAL';
+            echo 'Error Alarm';
         }
     }
 
