@@ -67,6 +67,7 @@ class Api_client extends CI_Controller
             $this->db->set('manual_status_syn', $data->manual_status_syn);
             $this->db->set('on_feedback_syn', $data->on_feedback_syn);
             $this->db->set('off_feedback_syn', $data->off_feedback_syn);
+            $this->db->set('ok_syn', $data->ok_syn);
             $this->db->where('id', 1);
             $this->db->update('pltmh_pengga_syn');
             //echo 'Update Syn Success';
@@ -139,19 +140,19 @@ class Api_client extends CI_Controller
             $data = json_decode($this->input->post('data_json'));
             
             //Generator
-            $this->db->set('non_drive', $data->non_drive);
-            $this->db->set('drive', $data->drive);
+            //$this->db->set('non_drive', $data->non_drive);
+            //$this->db->set('drive', $data->drive);
             $this->db->set('active_power', $data->active_power);
             $this->db->set('voltage', $data->voltage);
             $this->db->set('current', $data->current);
             $this->db->set('frequency', $data->frequency);
             $this->db->where('id', 1);
-            $this->db->update('pltmh_pengga_generator');
+            $this->db->update('pltmh_pengga_generator_backup');
             //echo 'Update Generator Success';
 
             //Turbine
-            $this->db->set('thrust_bearing', $data->thrust_bearing);
-            $this->db->set('second_bearing', $data->second_bearing);
+            //$this->db->set('thrust_bearing', $data->thrust_bearing);
+            //$this->db->set('second_bearing', $data->second_bearing);
             $this->db->set('turbine_speed', $data->turbine_speed);
             $this->db->set('inlet_pressure', $data->inlet_pressure);
             $this->db->set('water_level', $data->water_level);
@@ -176,7 +177,7 @@ class Api_client extends CI_Controller
                 $this->db->set('status_alarm', $v->status_alarm);
                 $this->db->where('id_alarm', $v->id_alarm);
                 $this->db->update('pltmh_pengga_alarm_var');
-                #echo 'Update Alarm Success' . $v->id_alarm;
+                //echo 'Update Alarm Success' . $v->id_alarm;
             }          
             echo 'Update Alarm Success';
         } catch (\Throwable $th) {
@@ -188,7 +189,7 @@ class Api_client extends CI_Controller
 	{
 		date_default_timezone_set('Asia/Jakarta');
 		$this->db->where('id', 1);
-		$data = $this->db->get('pltmh_pengga_generator')->first_row();
+		$data = $this->db->get('pltmh_pengga_generator_backup')->first_row();
 		echo json_encode($data);		
 	}
 

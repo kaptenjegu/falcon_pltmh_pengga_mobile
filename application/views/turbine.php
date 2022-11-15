@@ -33,7 +33,7 @@
                                     <center>###%###</center>
                                 </b></td>
                         </tr>
-                        <tr>
+                        <!--tr>
                             <td>Turbine Thrust Bearing Temp</td>
                             <td id="thrust_bearing"><b>
                                     <center>###C###</center>
@@ -44,7 +44,7 @@
                             <td id="second_bearing"><b>
                                     <center>###C###</center>
                                 </b></td>
-                        </tr>
+                        </tr-->
                     </tbody>
                 </table>
             </div>
@@ -88,7 +88,7 @@
                                 </b>
                             </td>
                         </tr>
-                        <tr>
+                        <!--tr>
                             <td>
                                 <label id="remote_indication_gv" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
@@ -99,7 +99,7 @@
                                 Remote Indication
                                 </b>
                             </td>
-                        </tr>
+                        </tr-->
                         <tr>
                             <td>
                                 <label id="auto_status_gv" class="btn-xs" style="color: white;">
@@ -282,7 +282,7 @@
                             </td>
                         </tr>
                         
-                        <tr>
+                        <!--tr>
                             <td>
                                 <label id="remote_indication_ghm" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
@@ -293,7 +293,7 @@
                                 Remote Indication
                                 </b>
                             </td>
-                        </tr>
+                        </tr-->
                         <tr>
                             <td>
                                 <label id="auto_status_ghm" class="btn-xs" style="color: white;">

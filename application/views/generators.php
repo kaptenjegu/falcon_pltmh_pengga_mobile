@@ -33,7 +33,7 @@
                                     <center>###Hz###</center>
                                 </b></td>
                         </tr>
-                        <tr>
+                        <!--tr>
                             <td>Drive Side Bearing Temp</td>
                             <td id="drive"><b>
                                     <center>###C###</center>
@@ -44,7 +44,7 @@
                             <td id="non_drive"><b>
                                     <center>###C###</center>
                                 </b></td>
-                        </tr>
+                        </tr-->
                     </tbody>
                 </table>
             </div>
@@ -76,7 +76,7 @@
                                 </b>
                             </td>
                         </tr>
-                        <tr>
+                        <!--tr>
                             <td>
                                 <label id="remote_indication_exc" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
@@ -87,7 +87,7 @@
                                 Remote Indication
                                 </b>
                             </td>
-                        </tr>
+                        </tr-->
                         <tr>
                             <td>
                                 <label id="auto_status_exc" class="btn-xs" style="color: white;">
@@ -168,13 +168,13 @@
                         </tr>
                         <tr>
                             <td>
-                                <label id="remote_indication_syn" class="btn-xs" style="color: white;">
+                                <label id="ok_syn" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
                                 </label>
                             </td>
                             <td>
                                 <b>
-                                Remote Indication
+                                Synchronizing OK
                                 </b>
                             </td>
                         </tr>
@@ -257,7 +257,7 @@
                             </td>
                         </tr>
                         
-                        <tr>
+                        <!--tr>
                             <td>
                                 <label id="remote_indication_cb" class="btn-xs" style="color: white;">
                                     <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
@@ -268,7 +268,7 @@
                                 Remote Indication
                                 </b>
                             </td>
-                        </tr>
+                        </tr-->
                         <tr>
                             <td>
                                 <label id="auto_status_cb" class="btn-xs" style="color: white;">

@@ -91,6 +91,26 @@
 		}
 
 		function get_home() {
+			//turbin
+			$.ajax({
+				url: "<?php echo base_url() . 'api_client/turbine_data/'; ?>",
+				type: "GET",
+				dataType: "json",
+				cache: false,
+				success: function(data) {
+					if (data['turbine_speed'] < 400) {
+						document.getElementById("sq_start3").style.backgroundColor = "gray";
+						document.getElementById("sq_stop3").style.backgroundColor = "green";
+					} else {          
+						document.getElementById("sq_start3").style.backgroundColor = "green";
+						document.getElementById("sq_stop3").style.backgroundColor = "gray";
+					}
+				},
+				error: function(data) {
+					console.log('gagal konek turbine OV');
+				}
+			});
+			//overview
 			$.ajax({
 				url: "<?php echo base_url() . 'api_client/ov_data/'; ?>",
 				type: "GET",
@@ -98,9 +118,9 @@
 				success: function(data) {
 					//ASP var
 					if (data['prm1'] == 1) {
-						document.getElementById("prm1").style.backgroundColor = "green";
-					} else {
 						document.getElementById("prm1").style.backgroundColor = "gray";
+					} else {
+						document.getElementById("prm1").style.backgroundColor = "green";
 					}
 					if (data['prm2'] == 1) {
 						document.getElementById("prm2").style.backgroundColor = "green";
@@ -143,11 +163,11 @@
 					} else {
 						document.getElementById("sq_start2").style.backgroundColor = "gray";
 					}
-					if (data['sq_start3'] == 1) {
+					/*if (data['sq_start3'] == 1) {
 						document.getElementById("sq_start3").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_start3").style.backgroundColor = "gray";
-					}
+					}*/
 					if (data['sq_start4'] == 1) {
 						document.getElementById("sq_start4").style.backgroundColor = "green";
 					} else {
@@ -189,11 +209,11 @@
 					} else {
 						document.getElementById("sq_stop2").style.backgroundColor = "gray";
 					}
-					if (data['sq_stop3'] == 0) {
+					/*if (data['sq_stop3'] == 0) {
 						document.getElementById("sq_stop3").style.backgroundColor = "green";
 					} else {
 						document.getElementById("sq_stop3").style.backgroundColor = "gray";
-					}
+					}*/
 					if (data['sq_stop4'] == 1) {
 						document.getElementById("sq_stop4").style.backgroundColor = "green";
 					} else {
@@ -213,8 +233,8 @@
 				dataType: "json",
 				cache: false,
 				success: function(data) {
-					document.getElementById("second_bearing").innerHTML = '<b>' + data['second_bearing'] + ' C</b>';
-					document.getElementById("thrust_bearing").innerHTML = '<b>' + data['thrust_bearing'] + ' C</b>';
+					//document.getElementById("second_bearing").innerHTML = '<b>' + data['second_bearing'] + ' C</b>';
+					//document.getElementById("thrust_bearing").innerHTML = '<b>' + data['thrust_bearing'] + ' C</b>';
 					document.getElementById("turbine_speed").innerHTML = '<b>' + data['turbine_speed'] + ' RPM</b>';
 					document.getElementById("inlet_pressure").innerHTML = '<b>' + data['inlet_pressure'] + ' bar</b>';
 					document.getElementById("governor_position").innerHTML = '<b>' + data['governor_position'] + ' %</b>';
@@ -245,11 +265,11 @@
 						document.getElementById("permit_close_gv").style.backgroundColor = "gray";
 					}
 
-					if (data['remote_indication_gv'] == 1) {
+					/*if (data['remote_indication_gv'] == 1) {
 						document.getElementById("remote_indication_gv").style.backgroundColor = "green";
 					} else {
 						document.getElementById("remote_indication_gv").style.backgroundColor = "gray";
-					}
+					}*/
 
 					if (data['auto_status_gv'] == 1) {
 						document.getElementById("auto_status_gv").style.backgroundColor = "green";
@@ -317,11 +337,11 @@
 						document.getElementById("permit_operation_ghm").style.backgroundColor = "gray";
 					}
 
-					if (data['remote_indication_ghm'] == 1) {
+					/*if (data['remote_indication_ghm'] == 1) {
 						document.getElementById("remote_indication_ghm").style.backgroundColor = "green";
 					} else {
 						document.getElementById("remote_indication_ghm").style.backgroundColor = "gray";
-					}
+					}*/
 
 					if (data['auto_status_ghm'] == 1) {
 						document.getElementById("auto_status_ghm").style.backgroundColor = "green";
@@ -357,8 +377,8 @@
 				dataType: "json",
 				cache: false,
 				success: function(data) {
-					document.getElementById("non_drive").innerHTML = '<b>' + data['non_drive'] + ' C</b>';
-					document.getElementById("drive").innerHTML = '<b>' + data['drive'] + ' C</b>';
+					//document.getElementById("non_drive").innerHTML = '<b>' + data['non_drive'] + ' C</b>';
+					//document.getElementById("drive").innerHTML = '<b>' + data['drive'] + ' C</b>';
 					document.getElementById("active_power").innerHTML = '<b>' + data['active_power'] + ' kW</b>';
 					document.getElementById("voltage").innerHTML = '<b>' + data['voltage'] + ' kV</b>';
 					document.getElementById("current").innerHTML = '<b>' + data['current'] + ' kA</b>';
@@ -383,11 +403,11 @@
 						document.getElementById("permit_operation_exc").style.backgroundColor = "gray";
 					}
 
-					if (data['remote_indication_exc'] == 1) {
+					/*if (data['remote_indication_exc'] == 1) {
 						document.getElementById("remote_indication_exc").style.backgroundColor = "green";
 					} else {
 						document.getElementById("remote_indication_exc").style.backgroundColor = "gray";
-					}
+					}*/
 
 					if (data['auto_status_exc'] == 1) {
 						document.getElementById("auto_status_exc").style.backgroundColor = "green";
@@ -412,10 +432,10 @@
 						document.getElementById("permit_operation_syn").style.backgroundColor = "gray";
 					}
 
-					if (data['remote_indication_syn'] == 1) {
-						document.getElementById("remote_indication_syn").style.backgroundColor = "green";
+					if (data['ok_syn'] == 1) {
+						document.getElementById("ok_syn").style.backgroundColor = "green";
 					} else {
-						document.getElementById("remote_indication_syn").style.backgroundColor = "gray";
+						document.getElementById("ok_syn").style.backgroundColor = "gray";
 					}
 
 					if (data['auto_status_syn'] == 1) {
@@ -441,11 +461,11 @@
 						document.getElementById("permit_operation_cb").style.backgroundColor = "gray";
 					}
 
-					if (data['remote_indication_cb'] == 1) {
+					/*if (data['remote_indication_cb'] == 1) {
 						document.getElementById("remote_indication_cb").style.backgroundColor = "green";
 					} else {
 						document.getElementById("remote_indication_cb").style.backgroundColor = "gray";
-					}
+					}*/
 
 					if (data['auto_status_cb'] == 1) {
 						document.getElementById("auto_status_cb").style.backgroundColor = "green";
@@ -455,7 +475,7 @@
 						document.getElementById("manual_status_cb").style.backgroundColor = "green";
 					}
 
-					if (data['open_feedback_cb'] == 1) {
+					if (data['open_feedback_cb'] == 0) {
 						document.getElementById("open_feedback_cb").style.backgroundColor = "green";
 						document.getElementById("close_feedback_cb").style.backgroundColor = "gray";
 					} else {
@@ -495,7 +515,7 @@
 					document.getElementById("dash_turbin").innerHTML = '<span class="label label-default arrowed arrowed-right">Not Running</span>';
 				}
 
-				if (data['cb'] == 1) {
+				if (data['cb'] == 0) {
 					document.getElementById("dash_cb").innerHTML = '<span class="label label-success arrowed arrowed-right">Open</span>';
 				} else {
 					document.getElementById("dash_cb").innerHTML = '<b class="label label-default arrowed arrowed-right">Close</b>';
