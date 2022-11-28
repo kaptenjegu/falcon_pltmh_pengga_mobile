@@ -237,7 +237,7 @@
 					//document.getElementById("thrust_bearing").innerHTML = '<b>' + data['thrust_bearing'] + ' C</b>';
 					document.getElementById("turbine_speed").innerHTML = '<b>' + data['turbine_speed'] + ' RPM</b>';
 					document.getElementById("inlet_pressure").innerHTML = '<b>' + data['inlet_pressure'] + ' bar</b>';
-					document.getElementById("governor_position").innerHTML = '<b>' + data['governor_position'] + ' %</b>';
+					document.getElementById("governor_position").innerHTML = '<b>' + data['governor_position'] + ' mm</b>';
 					document.getElementById("water_level").innerHTML = '<b>' + data['water_level'] + ' mdpl</b>';
 				},
 				error: function(data) {
@@ -380,8 +380,8 @@
 					//document.getElementById("non_drive").innerHTML = '<b>' + data['non_drive'] + ' C</b>';
 					//document.getElementById("drive").innerHTML = '<b>' + data['drive'] + ' C</b>';
 					document.getElementById("active_power").innerHTML = '<b>' + data['active_power'] + ' kW</b>';
-					document.getElementById("voltage").innerHTML = '<b>' + data['voltage'] + ' kV</b>';
-					document.getElementById("current").innerHTML = '<b>' + data['current'] + ' kA</b>';
+					document.getElementById("voltage").innerHTML = '<b>' + data['voltage'] + ' V</b>';
+					document.getElementById("current").innerHTML = '<b>' + data['current'] + ' A</b>';
 					document.getElementById("frequency").innerHTML = '<b>' + data['frequency'] + ' Hz</b>';
 				},
 				error: function(data) {
