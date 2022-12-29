@@ -516,9 +516,9 @@
 				}
 
 				if (data['cb'] == 0) {
-					document.getElementById("dash_cb").innerHTML = '<span class="label label-success arrowed arrowed-right">Open</span>';
+					document.getElementById("dash_cb").innerHTML = '<span class="label label-danger arrowed arrowed-right">Open</span>';
 				} else {
-					document.getElementById("dash_cb").innerHTML = '<b class="label label-default arrowed arrowed-right">Close</b>';
+					document.getElementById("dash_cb").innerHTML = '<b class="label label-success arrowed arrowed-right">Close</b>';
 				}
 			},
 			error: function (data) {
