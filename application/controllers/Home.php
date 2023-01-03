@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		detection();
-		is_logged_in();
+		//is_logged_in();
 	}
 	
 	public function index()
@@ -16,5 +16,11 @@ class Home extends CI_Controller {
 		$this->load->view('footer',$data);
 	}
 
+	public function n_alarm()
+	{
+		$this->db->where('status_alarm', 1);
+		$data = $this->db->get('pltmh_pengga_alarm_var')->num_rows();
+		echo json_encode($data);
+	}
 	
 }

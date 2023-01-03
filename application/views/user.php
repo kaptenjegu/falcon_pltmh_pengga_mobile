@@ -1,86 +1,70 @@
-<div class="col-xs-12 col-sm-12">
-    <div class="widget-box">
-        <div class="widget-header">
-            <h4 class="widget-title">Edit Password</h4>
-        </div>
-
-        <div class="widget-body">
-            <div class="widget-main">
-                <form method="post" action="<?= base_url('user/edit/') ?>">
-                    <input type="hidden" name="id_user" value="<?= $_SESSION['id_user'] ?>">
-                <div>
-                    <label for="form-user">Username</label>
-                    <input type="text" class="form-control" id="form-user" placeholder="Username" value="<?= $_SESSION['username'] ?>" disabled>
-                </div><br>
-                <div>
-                    <label for="form-pass">Password</label>
-                    <input type="password" class="form-control" id="form-pass" name="pass" placeholder="Password" required>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-success">Change</button>
-            </form>
+<style>
+    .btn-reset{
+        text-decoration: none;
+        background-color: purple;
+        color: white;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 15%;
+    }
+</style>
+<div style="width: 100%; height:auto;margin-left:0%;background-color: transparent;z-index: 1;position: absolute;">
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <!-- Edit -->
+        <div style="border-radius: 10px; width: 300px;height: 150px; top: 10px;z-index:2;position: absolute;background-image: linear-gradient( #1e85aa,#0a1e51);color: white;">
+            <div style="width: 100%;font-weight:bold;color:white;text-align:center;background-color:transparent;font-size:13px;margin-top: 3px;">Edit Password</div>
+            <?php $top = 20; ?>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Username</div>
+                <input type="text" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">
             </div>
-        </div>
-    </div>
-</div>
-<?php if($_SESSION['role'] == 2) { ?>
-<div class="col-xs-12 col-sm-12">
-    <div class="widget-box">
-        <div class="widget-header">
-            <h4 class="widget-title">Add User</h4>
-        </div>
-
-        <div class="widget-body">
-            <div class="widget-main">
-                <form method="post" action="<?= base_url('user/add/') ?>">
-                <div>
-                    <label for="form-user2">Username</label>
-                    <input type="text" class="form-control" id="form-user2" placeholder="Username" name="user" required>
-                </div>
-                <br>
-                <div>
-                    <label for="form-pass2">Password</label>
-                    <input type="password" class="form-control" id="form-pass2" placeholder="Password" name="pass" required>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-info">Add</button>
-                </form>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 30 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Password</div>
+                <input type="password" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">
             </div>
-        </div>
-    </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 70 ?>px;">
+                <button style="width: 35%;height: 30px;position: absolute;margin-left:45%;background-color: #29a4da;color:white;text-align: center;font-size: 13px;border-radius: 10px;border: 1px solid white;">
+                    Simpan
+                </button>
+            </div>
+        </div>     
+
+        <!-- Tambah User -->
+        <div style="border-radius: 10px; width: 300px;height: 150px; top: 200px;z-index:2;position: absolute;background-image: linear-gradient( #6d6c6a,#1a1e26);color: white;">
+            <div style="width: 100%;font-weight:bold;color:white;text-align:center;background-color:transparent;font-size:13px;margin-top: 3px;">Tambah User</div>
+            <?php $top = 20; ?>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Username</div>
+                <input type="text" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 30 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Password</div>
+                <input type="password" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 70 ?>px;">
+                <button style="width: 35%;height: 30px;position: absolute;margin-left:45%;background-color: #fb8d00;color:white;text-align: center;font-size: 13px;border-radius: 10px;border: 1px solid white;">
+                    Simpan
+                </button>
+            </div>
+        </div>   
+        
+        <!-- list user -->
+        <table style="width:300px;border: 1px solid white;background-color: white;margin-top: 400px;font-size: 20px;">
+            <tr>
+                <th>No</th>
+                <th>Username</th>
+                <th>Opsi</th>
+            </tr>
+            
+            <tbody>
+            <?php 
+            $no = 1;
+            foreach($users as $v){ 
+                echo '<tr style="height:45px;"><td>' . $no . '</td><td>' . $v->username . '</td><td><a href="#" class="btn-reset">Reset</a></td></tr>';
+                $no += 1;
+            } 
+            ?>
+            </tbody>
+        </table>
+	</div> 
 </div>
-<div class="col-xs-12 col-sm-12">
-    <div class="widget-box">
-        <div class="widget-header">
-            <h4 class="widget-title">Manage User</h4>
-        </div>
-
-        <div class="widget-body">
-            <div class="widget-main">
-                <table id="simple-table" class="table  table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Username</th>
-                            <th>Opsi</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <?php
-                        $no = 1;
-                        foreach ($users as $v) {
-                            echo '<tr><td>' . $no . '</td><td>' . $v->username . '</td><td><a href="" class="btn btn-sm btn-danger">Delete</a></td></tr>';
-                            $no += 1;
-                        }
-                        ?>
-
-                    </tbody>
-                </table>
-
-            </div><!-- /.widget-main -->
-        </div><!-- /.widget-body -->
-
-    </div>
-</div>
-<?php } ?>

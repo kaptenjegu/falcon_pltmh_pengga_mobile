@@ -1,350 +1,44 @@
-<div class="col-xs-12">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-            <h4 class="widget-title lighter">
-                <b>Turbine Parameter</b>
-            </h4>
-        </div>
-        <div class="widget-body">
-            <div class="widget-main">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td>RPM Turbine</td>
-                            <td id="turbine_speed"><b>
-                                    <center>###RPM###</center>
-                                </b></td>
-                        </tr>
-                        <tr>
-                            <td>Water Level</td>
-                            <td id="water_level"><b>
-                                    <center>###mdpl###</center>
-                                </b></td>
-                        </tr>
-                        <tr>
-                            <td>Turbine Inlet Water Press</td>
-                            <td id="inlet_pressure"><b>
-                                    <center>###bar###</center>
-                                </b></td>
-                        </tr>
-                        <tr>
-                            <td>Governor Position</td>
-                            <td id="governor_position"><b>
-                                    <center>###%###</center>
-                                </b></td>
-                        </tr>
-                        <!--tr>
-                            <td>Turbine Thrust Bearing Temp</td>
-                            <td id="thrust_bearing"><b>
-                                    <center>###C###</center>
-                                </b></td>
-                        </tr>
-                        <tr>
-                            <td>Turbine Second Bearing Temp</td>
-                            <td id="second_bearing"><b>
-                                    <center>###C###</center>
-                                </b></td>
-                        </tr-->
-                    </tbody>
-                </table>
+<div style="width: 100%; height:auto;margin-left:0%;background-color: transparent;z-index: 1;position: absolute;">
+    <!--div style="z-index: 3;position: absolute;width:100%;color: white;text-align:center;font-weight:bold;font-size: 13px;">
+		Monitoring Generator
+	</div-->
+	<div style="display: flex;justify-content: center;align-items: center;">
+        <div style="border-radius: 10px; width: 300px;height: 280px; top: 100px;z-index:2;position: absolute;background-image:linear-gradient(#123f83, #15b575);color: white;">
+            <div style="width: 100%;font-weight:bold;color:white;text-align:center;background-color:transparent;font-size:13px;">Data Turbin</div>
+            <?php $top = 20; ?>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">RPM Turbine</div>
+                <div id="turbine_speed" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 30 ?>px;">
+            <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Water Level</div>
+                <div id="water_level" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 60 ?>px;">
+            <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Inlet Pressure</div>
+                <div id="inlet_pressure" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 90 ?>px;">
+            <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Penstock Pressure</div>
+                <div id="penstock_pressure" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 120 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Governor Position</div>
+                <div id="governor_position" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 150 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Excitation</div>
+                <div id="volt_exc" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 180 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Gov. Oil Pressure</div>
+                <div id="governor_oil" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
             </div>
         </div>
-    </div>
-</div><!-- /.col -->
 
-
-<div class="col-xs-12">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-            <h4 class="widget-title lighter">
-                <b>Gate Valve Monitoring</b>
-            </h4>
-        </div>
-        <div class="widget-body">
-            <div class="widget-main">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label id="permit_open_gv" class="btn-xs" style="color: white;"">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Permit to open
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="permit_close_gv" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Permit to close
-                                </b>
-                            </td>
-                        </tr>
-                        <!--tr>
-                            <td>
-                                <label id="remote_indication_gv" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Remote Indication
-                                </b>
-                            </td>
-                        </tr-->
-                        <tr>
-                            <td>
-                                <label id="auto_status_gv" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Auto Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="manual_status_gv" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Manual Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="open_feedback_gv" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Open Feedback
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="close_feedback_gv" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Close Feedback
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="trip_indication_gv" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Trip Indication
-                                </b>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div><!-- /.col -->
-
-<div class="col-xs-12">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-            <h4 class="widget-title lighter">
-                <b>Gov Gear Mode Monitoring</b>
-            </h4>
-        </div>
-        <div class="widget-body">
-            <div class="widget-main">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label id="permit_operation_ggm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Permit to operation
-                                </b>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <label id="remote_indication_ggm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Remote Indication
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="auto_status_ggm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Auto Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="manual_status_ggm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Manual Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="fault_indication_ggm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Fault Indication
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="underspeed_ggm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Underspeed
-                                </b>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div><!-- /.col -->
-
-<div class="col-xs-12">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-            <h4 class="widget-title lighter">
-                <b>Gov Hyd Mode Monitoring</b>
-            </h4>
-        </div>
-        <div class="widget-body">
-            <div class="widget-main">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label id="permit_operation_ghm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Permit to operation
-                                </b>
-                            </td>
-                        </tr>
-                        
-                        <!--tr>
-                            <td>
-                                <label id="remote_indication_ghm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Remote Indication
-                                </b>
-                            </td>
-                        </tr-->
-                        <tr>
-                            <td>
-                                <label id="auto_status_ghm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Auto Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="manual_status_ghm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Manual Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="fault_indication_ghm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Fault Indication
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="underspeed_ghm" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Underspeed
-                                </b>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div><!-- /.col -->
+     
+	</div> 
+    <br>
+    <br>
+	
+</div>

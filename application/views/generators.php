@@ -1,337 +1,109 @@
-<div class="col-xs-12">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-            <h4 class="widget-title lighter">
-                <b>Generator Parameter</b>
-            </h4>
+<div style="width: 100%; height:800px;margin-left:0%;background-color: transparent;z-index: 1;position: absolute;">
+    <!--div style="z-index: 3;position: absolute;width:100%;color: white;text-align:center;font-weight:bold;font-size: 13px;">
+		Monitoring Generator
+	</div-->
+	<div style="display: flex;justify-content: center;align-items: center;">
+        <div style="border-radius: 10px; width: 300px;height: 380px; top: 10px;z-index:2;position: absolute;background-image:linear-gradient(#123f83, #15b575);color: white;">
+            <div style="width: 100%;font-weight:bold;color:white;text-align:center;background-color:transparent;font-size:13px;">Data Generator</div>
+            <?php $top = 20; ?>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Tegangan R-S</div>
+                <div id="gen_vrs" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 30 ?>px;">
+            <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Tegangan S-T</div>
+                <div id="gen_vst" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 60 ?>px;">
+            <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Tegangan T-R</div>
+                <div id="gen_vtr" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 90 ?>px;">
+            <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Arus R</div>
+                <div id="gen_ir" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 120 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Arus S</div>
+                <div id="gen_is" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 150 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Arus T</div>
+                <div id="gen_it" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 180 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Daya Aktif</div>
+                <div id="gen_daya_aktif" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 210 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Daya Reaktif</div>
+                <div id="gen_daya_reaktif" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 240 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Daya Semu</div>
+                <div id="gen_daya_semu" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 270 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Frekuensi</div>
+                <div id="gen_frequency" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 300 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Cos φ</div>
+                <div id="gen_faktor_daya" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            
         </div>
-        <div class="widget-body">
-            <div class="widget-main">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td>Active Power</td>
-                            <td id="active_power"><b>
-                                    <center>###kW###</center>
-                                </b></td>
-                        </tr>
-                        <tr>
-                            <td>Generator Voltage</td>
-                            <td id="voltage"><b>
-                                    <center>###kV###</center>
-                                </b></td>
-                        </tr>
-                        <tr>
-                            <td>Generator Current</td>
-                            <td id="current"><b>
-                                    <center>###kA###</center>
-                                </b></td>
-                        </tr>
-                        <tr>
-                            <td>Frequency</td>
-                            <td id="frequency"><b>
-                                    <center>###Hz###</center>
-                                </b></td>
-                        </tr>
-                        <!--tr>
-                            <td>Drive Side Bearing Temp</td>
-                            <td id="drive"><b>
-                                    <center>###C###</center>
-                                </b></td>
-                        </tr>
-                        <tr>
-                            <td>No-Drive Side Bearing Temp</td>
-                            <td id="non_drive"><b>
-                                    <center>###C###</center>
-                                </b></td>
-                        </tr-->
-                    </tbody>
-                </table>
+
+     <!-- LINE -->
+        <div style="border-radius: 10px; width: 300px;height: 380px; top: 400px;z-index:2;position: absolute;background-image:linear-gradient(#123f83, #15b575);color: white;">
+            <div style="width: 100%;font-weight:bold;color:white;text-align:center;background-color:transparent;font-size:13px;">Data Line</div>
+            <?php $top = 20; ?>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Tegangan R-S</div>
+                <div id="line_vrs" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 30 ?>px;">
+            <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Tegangan S-T</div>
+                <div id="line_vst" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 60 ?>px;">
+            <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Tegangan T-R</div>
+                <div id="line_vtr" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 90 ?>px;">
+            <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Arus R</div>
+                <div id="line_ir" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 120 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Arus S</div>
+                <div id="line_is" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 150 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Arus T</div>
+                <div id="line_it" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 180 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Daya Aktif</div>
+                <div id="line_daya_aktif" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 210 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Daya Reaktif</div>
+                <div id="line_daya_reaktif" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 240 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Daya Semu</div>
+                <div id="line_daya_semu" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 270 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Frekuensi</div>
+                <div id="line_frequency" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
+            </div>
+            <div style="width: 100%;font-weight:bold;margin-top: <?= $top + 300 ?>px;">
+                <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">Cos φ</div>
+                <div id="line_faktor_daya" style="width: 50%;position: absolute;margin-left:45%;background-color:white;color:black;text-align: center;font-size: 13px;">#####</div>
             </div>
         </div>
-    </div>
-</div><!-- /.col -->
-
-
-<div class="col-xs-12">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-            <h4 class="widget-title lighter">
-                <b>Excitation Monitoring</b>
-            </h4>
-        </div>
-        <div class="widget-body">
-            <div class="widget-main">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label id="permit_operation_exc" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Permit to operation
-                                </b>
-                            </td>
-                        </tr>
-                        <!--tr>
-                            <td>
-                                <label id="remote_indication_exc" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Remote Indication
-                                </b>
-                            </td>
-                        </tr-->
-                        <tr>
-                            <td>
-                                <label id="auto_status_exc" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Auto Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="manual_status_exc" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Manual Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="on_feedback_exc" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                ON Feedback
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="off_feedback_exc" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                OFF Feedback
-                                </b>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div><!-- /.col -->
-
-<div class="col-xs-12">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-            <h4 class="widget-title lighter">
-                <b>Synch Monitoring</b>
-            </h4>
-        </div>
-        <div class="widget-body">
-            <div class="widget-main">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label id="permit_operation_syn" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Permit to operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="ok_syn" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Synchronizing OK
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="auto_status_syn" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Auto Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="manual_status_syn" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Manual Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="on_feedback_syn" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                ON Feedback
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="off_feedback_syn" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                OFF Feedback
-                                </b>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div><!-- /.col -->
-
-<div class="col-xs-12">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-            <h4 class="widget-title lighter">
-                <b>CB Monitoring</b>
-            </h4>
-        </div>
-        <div class="widget-body">
-            <div class="widget-main">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label id="permit_operation_cb" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Permit to operation
-                                </b>
-                            </td>
-                        </tr>
-                        
-                        <!--tr>
-                            <td>
-                                <label id="remote_indication_cb" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Remote Indication
-                                </b>
-                            </td>
-                        </tr-->
-                        <tr>
-                            <td>
-                                <label id="auto_status_cb" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Auto Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="manual_status_cb" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Manual Operation
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="open_feedback_cb" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Open Feedback
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="close_feedback_cb" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon glyphicon glyphicon-ok"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Close Feedback
-                                </b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label id="trip_indication_cb" class="btn-xs" style="color: white;">
-                                    <i class="icon-only ace-icon fa fa-exclamation-circle"></i>
-                                </label>
-                            </td>
-                            <td>
-                                <b>
-                                Trip Indication
-                                </b>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div><!-- /.col -->
+	</div> 
+    <br>
+    <br>
+	
+</div>
