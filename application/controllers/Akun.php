@@ -12,6 +12,7 @@ class Akun extends CI_Controller {
 	{
 		$data['page'] = 'user';
         $this->db->where('aktif', 1);
+        $this->db->where('role', 1);
         $data['users'] = $this->db->get('pltmh_pengga_user')->result();
 		$this->load->view('header',$data);
 		$this->load->view('user',$data);
