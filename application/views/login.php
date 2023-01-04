@@ -18,7 +18,6 @@ header('Expires: 0');
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url('assets/css/login.css');?>" />
 </head>
-<!--Coded with love by Mutiullah Samim-->
 
 <body style="background-image: url('<?= base_url('assets/images/bg.jpg?random=' . rand());?>');background-repeat: no-repeat;background-position: center;background-attachment: fixed;">
     <div class="container h-100">
