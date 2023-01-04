@@ -67,6 +67,17 @@
             </tbody>
         </table>
 
-        
+        <!-- logout -->
+        <div style="width: 100%;font-weight:bold;margin-top: 800px;z-index:2;position: absolute;display: flex;justify-content: center;align-items: center;">
+            <a href="<?= base_url('login/out') ?>" style="font-weight: bold; width: 35%;height: 30px;position: absolute;background-color: red;color:white;text-align: center;display: flex;justify-content: center;align-items: center; text-decoration: none; font-size: 13px;border-radius: 10px;border: 1px solid white;">
+                Log Out
+            </a>
+        </div>
+
+        <div style="width: 100%; height: 100px; font-weight:bold;margin-top: 900px;z-index:2;position: absolute;display: flex;justify-content: center;align-items: center;">
+        </div>
+
+
+
 	</div> 
 </div>
