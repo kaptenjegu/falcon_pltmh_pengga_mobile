@@ -2,7 +2,7 @@
 	<img src="<? //= base_url('/assets/images/header.png') ?>" style="width: 150px; height: auto;">
 </div-->
 <div style="width: 100%; height:600px;margin-left:0%;background-color: transparent;z-index: 1;position: absolute;">
-    <div style="z-index: 3;position: absolute;width:100%;color: white;text-align:center;font-weight:bold;font-size: 15px;">
+    <div style="z-index: 3;margin-top: 10px;position: absolute;width:100%;color: white;text-align:center;font-weight:bold;font-size: 15px;">
 		Single Line Diagram
 	</div>
 	<div style="display: flex;justify-content: center;align-items: center;">

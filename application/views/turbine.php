@@ -4,7 +4,7 @@
 	</div-->
 	<div style="display: flex;justify-content: center;align-items: center;">
         <div style="border-radius: 10px; width: 300px;height: 280px; top: 100px;z-index:2;position: absolute;background-image:linear-gradient(#123f83, #15b575);color: white;">
-            <div style="width: 100%;font-weight:bold;color:white;text-align:center;background-color:transparent;font-size:13px;">Data Turbin</div>
+            <div style="margin-top:15px;width: 100%;font-weight:bold;color:white;text-align:center;background-color:transparent;font-size:13px;">Data Turbin</div>
             <?php $top = 20; ?>
             <div style="width: 100%;font-weight:bold;margin-top: <?= $top ?>px;">
                 <div style="width: 40%;position: absolute;margin-left:5%;background-color:transparent;color:white;text-align: center;font-size: 13px;">RPM Turbine</div>
