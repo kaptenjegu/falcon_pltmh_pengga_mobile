@@ -5,7 +5,7 @@ class Turbine extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		detection();
-		//is_logged_in();
+		is_logged_in();
 	}
 	
 	public function index()
