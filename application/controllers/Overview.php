@@ -16,5 +16,4 @@ class Overview extends CI_Controller {
 		$this->load->view('footer',$data);
 	}
 	
-	
 }
