@@ -34,6 +34,7 @@
         </div>     
         </form>
 
+        <?php if($_SESSION['role'] == 2) { ?>
         <!-- Tambah User -->
         <form method="post" action="<?= base_url('akun/add/') ?>">
         <div style="border-radius: 10px; width: 300px;height: 150px; top: 200px;z-index:2;position: absolute;background-image: linear-gradient( #6d6c6a,#1a1e26);color: white;">
@@ -73,6 +74,7 @@
             ?>
             </tbody>
         </table>
+        <?php } ?>
 
         <!-- logout -->
         <div style="width: 100%;font-weight:bold;margin-top: 800px;z-index:3;position: absolute;display: flex;justify-content: center;align-items: center;">
