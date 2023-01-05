@@ -55,6 +55,7 @@
             </div>
         </div>   
         </form>
+        
 
         <!-- list user -->
         <table style="width:300px;border: 1px solid white;background-color: white;margin-top: 400px;font-size: 20px;">
@@ -74,6 +75,10 @@
             ?>
             </tbody>
         </table>
+        
+        <?php } else{?>
+            <table style="width:300px;border: 0px solid white;background-color: transparent;margin-top: 400px;font-size: 20px;">
+            </table>
         <?php } ?>
 
         <!-- logout -->
