@@ -101,15 +101,15 @@
 					document.getElementById("volt_exc").innerHTML = data['volt_exc'] + " VDC";
 
 					if (data['auto_status_gv'] == 1) {
-						document.getElementById("auto_status_gv").style.backgroundColor = "greenyellow";
+						document.getElementById("auto_status_gv").style.backgroundColor = "#7CFC00";
 						document.getElementById("manual_status_gv").style.backgroundColor = "transparent";						
 					} else {
 						document.getElementById("auto_status_gv").style.backgroundColor = "transparent";
-						document.getElementById("manual_status_gv").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_gv").style.backgroundColor = "#7CFC00";
 					}
 
 					if (data['open_feedback_gv'] == 1) {
-						document.getElementById("open_feedback_gv").style.backgroundColor = "greenyellow";
+						document.getElementById("open_feedback_gv").style.backgroundColor = "#7CFC00";
 					} else {
 						document.getElementById("open_feedback_gv").style.backgroundColor = "transparent";
 					}
@@ -121,15 +121,15 @@
 					}
 					
 					if (data['auto_status_tc'] == 1) {
-						document.getElementById("auto_status_tc").style.backgroundColor = "greenyellow";
+						document.getElementById("auto_status_tc").style.backgroundColor = "#7CFC00";
 						document.getElementById("manual_status_tc").style.backgroundColor = "transparent";
 					} else {
 						document.getElementById("auto_status_tc").style.backgroundColor = "transparent";
-						document.getElementById("manual_status_tc").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_tc").style.backgroundColor = "#7CFC00";
 					}
 
 					if (data['on_feedback_tc'] == 1) {
-						document.getElementById("on_feedback_tc").style.backgroundColor = "greenyellow";
+						document.getElementById("on_feedback_tc").style.backgroundColor = "#7CFC00";
 						document.getElementById("off_feedback_tc").style.backgroundColor = "transparent";
 					} else {
 						document.getElementById("on_feedback_tc").style.backgroundColor = "transparent";
@@ -137,31 +137,31 @@
 					}
 
 					if (data['auto_status_ggm'] == 1) {
-						document.getElementById("auto_status_ggm").style.backgroundColor = "greenyellow";
+						document.getElementById("auto_status_ggm").style.backgroundColor = "#7CFC00";
 						document.getElementById("manual_status_ggm").style.backgroundColor = "transparent";
 					} else {
 						document.getElementById("auto_status_ggm").style.backgroundColor = "transparent";
-						document.getElementById("manual_status_ggm").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_ggm").style.backgroundColor = "#7CFC00";
 					}
 
 					if (data['auto_status_ghm'] == 1) {
-						document.getElementById("auto_status_ghm").style.backgroundColor = "greenyellow";
+						document.getElementById("auto_status_ghm").style.backgroundColor = "#7CFC00";
 						document.getElementById("manual_status_ghm").style.backgroundColor = "transparent";
 					} else {
 						document.getElementById("auto_status_ghm").style.backgroundColor = "transparent";
-						document.getElementById("manual_status_ghm").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_ghm").style.backgroundColor = "#7CFC00";
 					}
 
 					if (data['auto_status_exc'] == 1) {
-						document.getElementById("auto_status_exc").style.backgroundColor = "greenyellow";
+						document.getElementById("auto_status_exc").style.backgroundColor = "#7CFC00";
 						document.getElementById("manual_status_exc").style.backgroundColor = "transparent";
 					} else {
 						document.getElementById("auto_status_exc").style.backgroundColor = "transparent";
-						document.getElementById("manual_status_exc").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_exc").style.backgroundColor = "#7CFC00";
 					}
 
 					if (data['on_feedback_exc'] == 1) {
-						document.getElementById("on_feedback_exc").style.backgroundColor = "greenyellow";
+						document.getElementById("on_feedback_exc").style.backgroundColor = "#7CFC00";
 						document.getElementById("off_feedback_exc").style.backgroundColor = "transparent";
 					} else {
 						document.getElementById("on_feedback_exc").style.backgroundColor = "transparent";
@@ -169,15 +169,15 @@
 					}
 
 					if (data['auto_status_syn'] == 1) {
-						document.getElementById("auto_status_syn").style.backgroundColor = "greenyellow";
+						document.getElementById("auto_status_syn").style.backgroundColor = "#7CFC00";
 						document.getElementById("manual_status_syn").style.backgroundColor = "transparent";
 					} else {
 						document.getElementById("auto_status_syn").style.backgroundColor = "transparent";
-						document.getElementById("manual_status_syn").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_syn").style.backgroundColor = "#7CFC00";
 					}
 
 					if (data['on_feedback_syn'] == 1) {
-						document.getElementById("on_feedback_syn").style.backgroundColor = "greenyellow";
+						document.getElementById("on_feedback_syn").style.backgroundColor = "#7CFC00";
 						document.getElementById("off_feedback_syn").style.backgroundColor = "transparent";
 					} else {
 						document.getElementById("on_feedback_syn").style.backgroundColor = "transparent";
@@ -185,11 +185,11 @@
 					}
 
 					if (data['auto_status_cb'] == 1) {
-						document.getElementById("auto_status_cb").style.backgroundColor = "greenyellow";
+						document.getElementById("auto_status_cb").style.backgroundColor = "#7CFC00";
 						document.getElementById("manual_status_cb").style.backgroundColor = "transparent";
 					} else {
 						document.getElementById("auto_status_cb").style.backgroundColor = "transparent";
-						document.getElementById("manual_status_cb").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_cb").style.backgroundColor = "#7CFC00";
 					}
 
 					if (data['open_feedback_cb'] == 0) {
@@ -197,7 +197,7 @@
 						document.getElementById("close_feedback_cb").style.backgroundColor = "transparent";
 					} else {
 						document.getElementById("open_feedback_cb").style.backgroundColor = "transparent";
-						document.getElementById("close_feedback_cb").style.backgroundColor = "greenyellow";
+						document.getElementById("close_feedback_cb").style.backgroundColor = "#7CFC00";
 					}
 				},
 				error: function(data) {
