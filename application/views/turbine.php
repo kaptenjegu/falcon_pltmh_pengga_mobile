@@ -260,7 +260,9 @@
             </div>
         </div>
         <!-- ACB -->
-     
+
+        <div style="border-radius: 10px; width: <?= $width ?>;height: 35px; top: 1100px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-color: transparent;color: white;">
+        </div>
 	</div> 
     <br>
     <br>
