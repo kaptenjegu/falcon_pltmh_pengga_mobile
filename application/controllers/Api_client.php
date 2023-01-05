@@ -221,7 +221,7 @@ class Api_client extends CI_Controller
 	{
 		//$data = $this->db->query("SELECT * FROM pltmh_pengga_ov_asp, pltmh_pengga_seq_start,pltmh_pengga_seq_stop")->first_row();
 		date_default_timezone_set('Asia/Jakarta');
-		$data = $this->db->query("SELECT * FROM pltmh_pengga_turbine, pltmh_pengga_generator,pltmh_pengga_generator_backup, pltmh_pengga_line, pltmh_pengga_pid, pltmh_pengga_excitation, pltmh_pengga_cb")->first_row();
+		$data = $this->db->query("SELECT * FROM pltmh_pengga_turbine, pltmh_pengga_generator,pltmh_pengga_generator_backup, pltmh_pengga_line, pltmh_pengga_pid, pltmh_pengga_excitation, pltmh_pengga_cb,pltmh_pengga_gate_valve, pltmh_pengga_ggear_mode, pltmh_pengga_ghyd_mode,  pltmh_pengga_syn, pltmh_pengga_turbine_control")->first_row();
 		echo json_encode($data);	
 	}
 

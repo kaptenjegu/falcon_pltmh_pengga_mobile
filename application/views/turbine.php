@@ -3,7 +3,7 @@
 		Monitoring Generator
 	</div-->
 	<div style="display: flex;justify-content: center;align-items: center;">
-        <div style="border-radius: 10px; width: 300px;height: 280px; top: 100px;z-index:2;position: absolute;background-image:linear-gradient(#123f83, #15b575);color: white;">
+        <div style="border-radius: 10px; width: 300px;height: 280px; top: 10px;z-index:2;position: absolute;background-image:linear-gradient(#123f83, #15b575);color: white;">
             <div style="margin-top:15px;width: 100%;font-weight:bold;color:white;text-align:center;background-color:transparent;font-size:13px;">Data Turbin</div>
             <?php $top = 20; ?>
             <div style="width: 100%;font-weight:bold;margin-top: <?= $top ?>px;">
@@ -36,6 +36,230 @@
             </div>
         </div>
 
+        <?php 
+            $width = "300px"; 
+            $left = "0px"; 
+        ?>
+        <!-- gate valve / MIV control -->
+        <div style="border-radius: 10px; width: <?= $width ?>;height: 135px; top: 300px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-image:linear-gradient(#1872ed, #adebff,#1872ed);color: white;">
+            <div style="background-color: #E0FFFF; color: black; font-size: 12px; width: 90%;height: 80%; font-weight:bold;margin-top: 5%;margin-left: auto; margin-right: auto;">
+                
+                <div style="width: 100%;background-color: transparent;border: 1px black solid;text-align:center;">
+                    MIV
+                </div>
+                
+                <div id="auto_status_gv" style="top:40px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:45px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Auto Operation
+                </div>
+
+                <div id="manual_status_gv" style="top:57px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:62px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Manual Operation
+                </div>
+
+                <div id="open_feedback_gv" style="top:74px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:79px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Open Status
+                </div>
+
+                <div id="close_feedback_gv" style="top:91px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:96px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Close Status
+                </div>
+            </div>
+        </div>
+        <!-- END gate valve control -->
+
+        <!-- Turbin Status -->
+        <div style="border-radius: 10px; width: <?= $width ?>;height: 135px; top: 450px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-image:linear-gradient(#1872ed, #adebff,#1872ed);color: white;">
+            <div style="background-color: #E0FFFF; color: black; font-size: 12px; width: 90%;height: 80%; font-weight:bold;margin-top: 5%;margin-left: auto; margin-right: auto;">
+                
+                <div style="width: 100%;background-color: transparent;border: 1px black solid;text-align:center;">
+                    Turbin Status
+                </div>
+                
+                <div id="auto_status_tc" style="top:40px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:45px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Auto Operation
+                </div>
+
+                <div id="manual_status_tc" style="top:57px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:62px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Manual Operation
+                </div>
+
+                <div id="on_feedback_tc" style="top:74px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:79px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    On Status
+                </div>
+
+                <div id="off_feedback_tc" style="top:91px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:96px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Off Status
+                </div>
+            </div>
+        </div>
+        <!-- Turbin Status -->
+
+        <!-- GMode Status -->
+        <div style="border-radius: 10px; width: <?= $width ?>;height: 100px; top: 600px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-image:linear-gradient(#1872ed, #adebff,#1872ed);color: white;">
+            <div style="background-color: #E0FFFF; color: black; font-size: 12px; width: 90%;height: 80%; font-weight:bold;margin-top: 5%;margin-left: auto; margin-right: auto;">
+                
+                <div style="width: 100%;background-color: transparent;border: 1px black solid;text-align:center;">
+                    Gear Mode
+                </div>
+                
+                <div id="auto_status_ggm" style="top:40px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:45px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Auto Operation
+                </div>
+
+                <div id="manual_status_ggm" style="top:57px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:62px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Manual Operation
+                </div>
+            </div>
+        </div>
+        <!-- GMode Status -->
+
+        <!-- Hydro Status -->
+        <div style="border-radius: 10px; width: <?= $width ?>;height: 100px; top: 720px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-image:linear-gradient(#1872ed, #adebff,#1872ed);color: white;">
+            <div style="background-color: #E0FFFF; color: black; font-size: 12px; width: 90%;height: 80%; font-weight:bold;margin-top: 5%;margin-left: auto; margin-right: auto;">
+                
+                <div style="width: 100%;background-color: transparent;border: 1px black solid;text-align:center;">
+                    Hydrolic Mode
+                </div>
+                
+                <div id="auto_status_ghm" style="top:40px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:45px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Auto Operation
+                </div>
+
+                <div id="manual_status_ghm" style="top:57px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:62px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Manual Operation
+                </div>
+            </div>
+        </div>
+        <!-- Hydro Status -->
+
+        <!-- Exc -->
+        <div style="border-radius: 10px; width: <?= $width ?>;height: 135px; top: 840px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-image:linear-gradient(#1872ed, #adebff,#1872ed);color: white;">
+            <div style="background-color: #E0FFFF; color: black; font-size: 12px; width: 90%;height: 80%; font-weight:bold;margin-top: 5%;margin-left: auto; margin-right: auto;">
+                
+                <div style="width: 100%;background-color: transparent;border: 1px black solid;text-align:center;">
+                    Excitation
+                </div>
+                
+                <div id="auto_status_exc" style="top:40px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:45px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Auto Operation
+                </div>
+
+                <div id="manual_status_exc" style="top:57px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:62px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Manual Operation
+                </div>
+
+                <div id="on_feedback_exc" style="top:74px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:79px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    On Status
+                </div>
+
+                <div id="off_feedback_exc" style="top:91px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:96px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Off Status
+                </div>
+            </div>
+        </div>
+        <!-- EXC -->
+
+        <!-- Syn -->
+        <div style="border-radius: 10px; width: <?= $width ?>;height: 135px; top: 990px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-image:linear-gradient(#1872ed, #adebff,#1872ed);color: white;">
+            <div style="background-color: #E0FFFF; color: black; font-size: 12px; width: 90%;height: 80%; font-weight:bold;margin-top: 5%;margin-left: auto; margin-right: auto;">
+                
+                <div style="width: 100%;background-color: transparent;border: 1px black solid;text-align:center;">
+                    Synchronizing
+                </div>
+                
+                <div id="auto_status_syn" style="top:40px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:45px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Auto Operation
+                </div>
+
+                <div id="manual_status_syn" style="top:57px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:62px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Manual Operation
+                </div>
+
+                <div id="on_feedback_syn" style="top:74px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:79px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    On Status
+                </div>
+
+                <div id="off_feedback_syn" style="top:91px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:96px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Off Status
+                </div>
+            </div>
+        </div>
+        <!-- Syn -->
+
+        <!-- ACB -->
+        <div style="border-radius: 10px; width: <?= $width ?>;height: 135px; top: 990px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-image:linear-gradient(#1872ed, #adebff,#1872ed);color: white;">
+            <div style="background-color: #E0FFFF; color: black; font-size: 12px; width: 90%;height: 80%; font-weight:bold;margin-top: 5%;margin-left: auto; margin-right: auto;">
+                
+                <div style="width: 100%;background-color: transparent;border: 1px black solid;text-align:center;">
+                    Air Circuit Breaker(ACB)
+                </div>
+                
+                <div id="auto_status_cb" style="top:40px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:45px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Auto Operation
+                </div>
+
+                <div id="manual_status_cb" style="top:57px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:62px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Manual Operation
+                </div>
+
+                <div id="open_feedback_cb" style="top:74px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:79px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Open Status
+                </div>
+
+                <div id="close_feedback_cb" style="top:91px;width: 10px;height: 10px;left: 60px; background-color: transparent;position: absolute;margin:5px;border: 1px black solid;">
+                </div>
+                <div style="top:96px;margin-left: 75px;text-align: left; width: 80%;background-color: transparent;position: absolute;">
+                    Close Status
+                </div>
+            </div>
+        </div>
+        <!-- ACB -->
      
 	</div> 
     <br>

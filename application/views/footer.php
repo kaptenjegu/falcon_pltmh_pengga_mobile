@@ -99,6 +99,106 @@
 					document.getElementById("water_level").innerHTML = data['water_level'] + ' mdpl';
 					document.getElementById("governor_oil").innerHTML = data['governor_oil'] + ' bar';
 					document.getElementById("volt_exc").innerHTML = data['volt_exc'] + " VDC";
+
+					if (data['auto_status_gv'] == 1) {
+						document.getElementById("auto_status_gv").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_gv").style.backgroundColor = "transparent";						
+					} else {
+						document.getElementById("auto_status_gv").style.backgroundColor = "transparent";
+						document.getElementById("manual_status_gv").style.backgroundColor = "greenyellow";
+					}
+
+					if (data['open_feedback_gv'] == 1) {
+						document.getElementById("open_feedback_gv").style.backgroundColor = "greenyellow";
+					} else {
+						document.getElementById("open_feedback_gv").style.backgroundColor = "transparent";
+					}
+
+					if (data['close_feedback_gv'] == 1) {
+						document.getElementById("close_feedback_gv").style.backgroundColor = "red";
+					} else {
+						document.getElementById("close_feedback_gv").style.backgroundColor = "transparent";
+					}
+					
+					if (data['auto_status_tc'] == 1) {
+						document.getElementById("auto_status_tc").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_tc").style.backgroundColor = "transparent";
+					} else {
+						document.getElementById("auto_status_tc").style.backgroundColor = "transparent";
+						document.getElementById("manual_status_tc").style.backgroundColor = "greenyellow";
+					}
+
+					if (data['on_feedback_tc'] == 1) {
+						document.getElementById("on_feedback_tc").style.backgroundColor = "greenyellow";
+						document.getElementById("off_feedback_tc").style.backgroundColor = "transparent";
+					} else {
+						document.getElementById("on_feedback_tc").style.backgroundColor = "transparent";
+						document.getElementById("off_feedback_tc").style.backgroundColor = "red";
+					}
+
+					if (data['auto_status_ggm'] == 1) {
+						document.getElementById("auto_status_ggm").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_ggm").style.backgroundColor = "transparent";
+					} else {
+						document.getElementById("auto_status_ggm").style.backgroundColor = "transparent";
+						document.getElementById("manual_status_ggm").style.backgroundColor = "greenyellow";
+					}
+
+					if (data['auto_status_ghm'] == 1) {
+						document.getElementById("auto_status_ghm").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_ghm").style.backgroundColor = "transparent";
+					} else {
+						document.getElementById("auto_status_ghm").style.backgroundColor = "transparent";
+						document.getElementById("manual_status_ghm").style.backgroundColor = "greenyellow";
+					}
+
+					if (data['auto_status_exc'] == 1) {
+						document.getElementById("auto_status_exc").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_exc").style.backgroundColor = "transparent";
+					} else {
+						document.getElementById("auto_status_exc").style.backgroundColor = "transparent";
+						document.getElementById("manual_status_exc").style.backgroundColor = "greenyellow";
+					}
+
+					if (data['on_feedback_exc'] == 1) {
+						document.getElementById("on_feedback_exc").style.backgroundColor = "greenyellow";
+						document.getElementById("off_feedback_exc").style.backgroundColor = "transparent";
+					} else {
+						document.getElementById("on_feedback_exc").style.backgroundColor = "transparent";
+						document.getElementById("off_feedback_exc").style.backgroundColor = "red";
+					}
+
+					if (data['auto_status_syn'] == 1) {
+						document.getElementById("auto_status_syn").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_syn").style.backgroundColor = "transparent";
+					} else {
+						document.getElementById("auto_status_syn").style.backgroundColor = "transparent";
+						document.getElementById("manual_status_syn").style.backgroundColor = "greenyellow";
+					}
+
+					if (data['on_feedback_syn'] == 1) {
+						document.getElementById("on_feedback_syn").style.backgroundColor = "greenyellow";
+						document.getElementById("off_feedback_syn").style.backgroundColor = "transparent";
+					} else {
+						document.getElementById("on_feedback_syn").style.backgroundColor = "transparent";
+						document.getElementById("off_feedback_syn").style.backgroundColor = "red";
+					}
+
+					if (data['auto_status_cb'] == 1) {
+						document.getElementById("auto_status_cb").style.backgroundColor = "greenyellow";
+						document.getElementById("manual_status_cb").style.backgroundColor = "transparent";
+					} else {
+						document.getElementById("auto_status_cb").style.backgroundColor = "transparent";
+						document.getElementById("manual_status_cb").style.backgroundColor = "greenyellow";
+					}
+
+					if (data['open_feedback_cb'] == 0) {
+						document.getElementById("open_feedback_cb").style.backgroundColor = "red";
+						document.getElementById("close_feedback_cb").style.backgroundColor = "transparent";
+					} else {
+						document.getElementById("open_feedback_cb").style.backgroundColor = "transparent";
+						document.getElementById("close_feedback_cb").style.backgroundColor = "greenyellow";
+					}
 				},
 				error: function(data) {
 					console.log('gagal konek turbine');
