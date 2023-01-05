@@ -139,7 +139,7 @@ class Api_client extends CI_Controller
         try {
             $data = json_decode($this->input->post('data_json'));
             
-            //Generator
+            //Generator OV
             //$this->db->set('non_drive', $data->non_drive);
             //$this->db->set('drive', $data->drive);
             $this->db->set('active_power', $data->active_power);
@@ -148,7 +148,36 @@ class Api_client extends CI_Controller
             $this->db->set('frequency', $data->frequency);
             $this->db->where('id', 1);
             $this->db->update('pltmh_pengga_generator_backup');
-            //echo 'Update Generator Success';
+
+            //generator power
+            $this->db->set('gen_vrs', $data->gen_vrs);
+            $this->db->set('gen_vst', $data->gen_vst);
+            $this->db->set('gen_vtr', $data->gen_vtr);
+            $this->db->set('gen_ir', $data->gen_ir);
+            $this->db->set('gen_is', $data->gen_is);
+            $this->db->set('gen_it', $data->gen_it);
+            $this->db->set('gen_daya_aktif', $data->gen_daya_aktif);
+            $this->db->set('gen_daya_reaktif', $data->gen_daya_reaktif);
+            $this->db->set('gen_daya_semu', $data->gen_daya_semu);
+            $this->db->set('gen_frequency', $data->gen_frequency);
+            $this->db->set('gen_faktor_daya', $data->gen_faktor_daya);
+            $this->db->where('id', 1);
+            $this->db->update('pltmh_pengga_generator');
+
+            //line power
+            $this->db->set('line_vrs', $data->line_vrs);
+            $this->db->set('line_vst', $data->line_vst);
+            $this->db->set('line_vtr', $data->line_vtr);
+            $this->db->set('line_ir', $data->line_ir);
+            $this->db->set('line_is', $data->line_is);
+            $this->db->set('line_it', $data->line_it);
+            $this->db->set('line_daya_aktif', $data->line_daya_aktif);
+            $this->db->set('line_daya_reaktif', $data->line_daya_reaktif);
+            $this->db->set('line_daya_semu', $data->line_daya_semu);
+            $this->db->set('line_frequency', $data->line_frequency);
+            $this->db->set('line_faktor_daya', $data->line_faktor_daya);
+            $this->db->where('id', 1);
+            $this->db->update('pltmh_pengga_line');
 
             //Turbine
             //$this->db->set('thrust_bearing', $data->thrust_bearing);
@@ -157,6 +186,8 @@ class Api_client extends CI_Controller
             $this->db->set('inlet_pressure', $data->inlet_pressure);
             $this->db->set('water_level', $data->water_level);
             $this->db->set('governor_position', $data->governor_position);
+            $this->db->set('governor_oil', $data->governor_oil);
+            $this->db->set('penstock_pressure', $data->penstock_pressure);
             $this->db->where('id', 1);
             $this->db->update('pltmh_pengga_turbine');
             echo 'Update VAL Success';
