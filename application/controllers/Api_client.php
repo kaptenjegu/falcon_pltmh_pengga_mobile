@@ -127,6 +127,15 @@ class Api_client extends CI_Controller
             $this->db->where('id', 1);
             $this->db->update('pltmh_pengga_seq_stop');
 
+            //Turbin
+            $this->db->set('permit_operation_tc', $data->permit_operation_tc);
+            $this->db->set('auto_status_tc', $data->auto_status_tc);
+            $this->db->set('manual_status_tc', $data->manual_status_tc);
+            $this->db->set('on_feedback_tc', $data->on_feedback_tc);
+            $this->db->set('off_feedback_tc', $data->off_feedback_tc);
+            $this->db->where('id', 1);
+            $this->db->update('pltmh_pengga_turbine_control');
+
 
             echo 'Update VAR2 Success';
 
