@@ -227,7 +227,7 @@
         <!-- Syn -->
 
         <!-- ACB -->
-        <div style="border-radius: 10px; width: <?= $width ?>;height: 135px; top: 990px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-image:linear-gradient(#1872ed, #adebff,#1872ed);color: white;">
+        <div style="border-radius: 10px; width: <?= $width ?>;height: 135px; top: 1150px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-image:linear-gradient(#1872ed, #adebff,#1872ed);color: white;">
             <div style="background-color: #E0FFFF; color: black; font-size: 12px; width: 90%;height: 80%; font-weight:bold;margin-top: 5%;margin-left: auto; margin-right: auto;">
                 
                 <div style="width: 100%;background-color: transparent;border: 1px black solid;text-align:center;">
@@ -261,7 +261,7 @@
         </div>
         <!-- ACB -->
 
-        <div style="border-radius: 10px; width: <?= $width ?>;height: 35px; top: 1100px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-color: transparent;color: white;">
+        <div style="border-radius: 10px; width: <?= $width ?>;height: 35px; top: 1280px; margin-left:<?= $left ?>;z-index:1;position: absolute;background-color: transparent;color: white;">
         </div>
 	</div> 
     <br>
