@@ -56,6 +56,7 @@ class Api_client extends CI_Controller
             $this->db->set('manual_status_exc', $data->manual_status_exc);
             $this->db->set('on_feedback_exc', $data->on_feedback_exc);
             $this->db->set('off_feedback_exc', $data->off_feedback_exc);
+            $this->db->set('volt_exc', $data->volt_exc);
             $this->db->where('id', 1);
             $this->db->update('pltmh_pengga_excitation');
             //echo 'Update Exc Success';
