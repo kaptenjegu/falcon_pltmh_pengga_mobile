@@ -40,4 +40,9 @@ class Login extends CI_Controller {
 		session_destroy();
 		redirect('login');
 	}
+
+	public function directweb()
+	{
+		redirect('../webmobile/');
+	}
 }
